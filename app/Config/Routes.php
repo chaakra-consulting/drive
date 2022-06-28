@@ -35,7 +35,8 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'user\beranda::index');
+$routes->get('/', 'User\Beranda::index');
+$routes->add('/ganti', 'User\Beranda::ganti');
 
 /*
  * --------------------------------------------------------------------

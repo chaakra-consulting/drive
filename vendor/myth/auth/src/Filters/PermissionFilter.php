@@ -19,10 +19,11 @@ class PermissionFilter implements FilterInterface
 	 *
 	 * @param RequestInterface $request
 	 * @param array|null                         $params
+	 * @param array|null                          $arguments
 	 *
 	 * @return mixed
 	 */
-	public function before(RequestInterface $request, $params = null)
+	public function before(RequestInterface $request, $params = null, $arguments = null)
 	{
 		if (! function_exists('logged_in'))
 		{

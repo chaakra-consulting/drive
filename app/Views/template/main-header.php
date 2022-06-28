@@ -31,23 +31,17 @@
 							</li>
 							<li class="dropdown main-profile-menu nav nav-item nav-link">
 								<a class="profile-user d-flex" href=""><img alt=""
-										src="<?= base_url(); ?>/assets-themes/img/faces/6.jpg"></a>
+										src="<?= base_url(); ?>/foto/<?= user()->image; ?>"></a>
 								<div class="dropdown-menu">
 									<div class="main-header-profile bg-primary p-3">
 										<div class="d-flex wd-100p">
-											<div class="main-img-user"><img alt="" src="<?= base_url(); ?>/assets-themes/img/faces/6.jpg"
+											<div class="main-img-user"><img alt="" src="<?= base_url(); ?>/foto/<?= user()->image; ?>"
 													class=""></div>
 											<div class="ms-3 my-auto">
-												<h6>Petey Cruiser</h6><span>Premium Member</span>
+												<h6><?= user()->fullname; ?></h6>
 											</div>
 										</div>
 									</div>
-									<a class="dropdown-item" href=""><i class="bx bx-user-circle"></i>Profile</a>
-									<a class="dropdown-item" href=""><i class="bx bx-cog"></i> Edit Profile</a>
-									<a class="dropdown-item" href=""><i class="bx bxs-inbox"></i>Inbox</a>
-									<a class="dropdown-item" href=""><i class="bx bx-envelope"></i>Messages</a>
-									<a class="dropdown-item" href=""><i class="bx bx-slider-alt"></i> Account
-										Settings</a>
 									<a class="dropdown-item" href="<?php base_url()?>/logout"><i class="bx bx-log-out"></i> Log Out</a>
 								</div>
 							</li>
