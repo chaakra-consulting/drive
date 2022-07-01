@@ -35,11 +35,14 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'User\Beranda::index');
-$routes->add('/ubahprofil', 'User\Beranda::ubahprofil');
-$routes->add('/coba', 'User\Beranda::coba');
-$routes->add('/coba2', 'User\Beranda::coba2');
-$routes->add('/ubahsosmed', 'User\Beranda::ubahsosmed');
+$routes->get('/', 'Beranda::index');
+$routes->add('/ubahprofil', 'Beranda::ubahprofil');
+$routes->add('/ubahsosmed', 'Beranda::ubahsosmed');
+
+$routes->add('/manajemenusers', 'Manajemen_Users::index', ['filter' => 'role:admin,super admin']);
+
+$routes->add('/coba', 'Beranda::coba');
+$routes->add('/coba2', 'Beranda::coba2');
 
 /*
  * --------------------------------------------------------------------

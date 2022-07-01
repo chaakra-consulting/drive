@@ -174,6 +174,10 @@ use CodeIgniter\Images\Image;
 												<label for="Username">Username</label>
 												<input type="text" value="<?= user()->username; ?>" id="Username" name="username" class="form-control">
 											</div>
+                      <div class="form-group">
+												<label for="Username">Jabatan</label>
+												<input type="text" value="<?= user()->jabatan; ?>" id="Username" name="jabatan" class="form-control">
+											</div>
 											<div class="form-group">
 												<label for="Password">Ubah Foto</label>
 												<input type="file" name="foto" id="File" class="form-control">
