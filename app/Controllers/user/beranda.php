@@ -24,6 +24,9 @@ foreach ($files as $file) {
     unlink($file); // hapus file
 }
     }
+    public function coba2(){
+      return view('auth/reset');
+    }
     public function ubahprofil()
     {
       $id = $this->request->getPost("id");

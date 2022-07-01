@@ -38,6 +38,7 @@ $routes->set404Override();
 $routes->get('/', 'User\Beranda::index');
 $routes->add('/ubahprofil', 'User\Beranda::ubahprofil');
 $routes->add('/coba', 'User\Beranda::coba');
+$routes->add('/coba2', 'User\Beranda::coba2');
 $routes->add('/ubahsosmed', 'User\Beranda::ubahsosmed');
 
 /*

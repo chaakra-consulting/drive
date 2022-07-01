@@ -132,8 +132,13 @@
 					</form>
 					<hr>
 					<?php if ($config->activeResetter): ?>
+						<div class="main-signin-footer mt-5">
 					<p><a href="<?= route_to('forgot') ?>"><?=lang('Auth.forgotYourPassword')?></a></p>
 <?php endif; ?>
+<?php if ($config->activeResetter): ?>
+	<p>Tidak Punya Akun? <a href="<?= route_to('register') ?>"><?=lang('Auth.needAnAccount')?></a></p>
+<?php endif; ?>
+</div>
 												</div>
 											</div>
 										</div>
