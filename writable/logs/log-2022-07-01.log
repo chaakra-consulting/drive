@@ -1,0 +1,93 @@
+CRITICAL - 2022-07-01 01:20:14 --> move_uploaded_file(file/verdi sasmeka.png): failed to open stream: No such file or directory
+in APPPATH\Controllers\user\Beranda.php on line 36.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'move_uploaded_file(file/verdi sasmeka.png): failed to open stream: No such file or directory', 'APPPATH\\Controllers\\user\\Beranda.php', 36, [...])
+ 2 APPPATH\Controllers\user\Beranda.php(36): move_uploaded_file('C:\\xampp\\tmp\\php82F.tmp', 'file/verdi sasmeka.png')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\user\Beranda->ubahprofil()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\Beranda))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-01 01:21:00 --> move_uploaded_file(/public/fotoverdi sasmeka.png): failed to open stream: No such file or directory
+in APPPATH\Controllers\user\Beranda.php on line 36.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'move_uploaded_file(/public/fotoverdi sasmeka.png): failed to open stream: No such file or directory', 'APPPATH\\Controllers\\user\\Beranda.php', 36, [...])
+ 2 APPPATH\Controllers\user\Beranda.php(36): move_uploaded_file('C:\\xampp\\tmp\\phpBA79.tmp', '/public/fotoverdi sasmeka.png')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\user\Beranda->ubahprofil()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\Beranda))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-01 01:21:12 --> move_uploaded_file(/public/fotoverdi sasmeka.png): failed to open stream: No such file or directory
+in APPPATH\Controllers\user\Beranda.php on line 36.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'move_uploaded_file(/public/fotoverdi sasmeka.png): failed to open stream: No such file or directory', 'APPPATH\\Controllers\\user\\Beranda.php', 36, [...])
+ 2 APPPATH\Controllers\user\Beranda.php(36): move_uploaded_file('C:\\xampp\\tmp\\phpEA82.tmp', '/public/fotoverdi sasmeka.png')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\user\Beranda->ubahprofil()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\Beranda))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-01 01:23:13 --> move_uploaded_file(C:\xampp\htdocs\drive\public\/public/fotoverdi sasmeka.png): failed to open stream: No such file or directory
+in APPPATH\Controllers\user\Beranda.php on line 36.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'move_uploaded_file(C:\\xampp\\htdocs\\drive\\public\\/public/fotoverdi sasmeka.png): failed to open stream: No such file or directory', 'APPPATH\\Controllers\\user\\Beranda.php', 36, [...])
+ 2 APPPATH\Controllers\user\Beranda.php(36): move_uploaded_file('C:\\xampp\\tmp\\phpC1E3.tmp', 'FCPATH\\/public/fotoverdi sasmeka.png')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\user\Beranda->ubahprofil()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\Beranda))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-01 01:24:57 --> move_uploaded_file(C:\xampp\htdocs\drive\public\\public\foto\fotoverdi sasmeka.png): failed to open stream: No such file or directory
+in APPPATH\Controllers\user\Beranda.php on line 36.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'move_uploaded_file(C:\\xampp\\htdocs\\drive\\public\\\\public\\foto\\fotoverdi sasmeka.png): failed to open stream: No such file or directory', 'APPPATH\\Controllers\\user\\Beranda.php', 36, [...])
+ 2 APPPATH\Controllers\user\Beranda.php(36): move_uploaded_file('C:\\xampp\\tmp\\php5872.tmp', 'FCPATH\\\\public\\foto\\fotoverdi sasmeka.png')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\user\Beranda->ubahprofil()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\Beranda))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-07-01 01:25:31 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(username, fullname, email, image)
+          VALUES ('verdi sasmeka', '', 'v...' at line 1
+CRITICAL - 2022-07-01 01:25:31 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(username, fullname, email, image)
+          VALUES ('verdi sasmeka', '', 'v...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE user (username, fullname, email, image)
+          VALUES (\'verdi sasmeka\', \'\', \'verdysas@gmail.com\', \'verdi sasmeka.png\') where id=12', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE user (username, fullname, email, image)
+          VALUES (\'verdi sasmeka\', \'\', \'verdysas@gmail.com\', \'verdi sasmeka.png\') where id=12')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE user (username, fullname, email, image)
+          VALUES (\'verdi sasmeka\', \'\', \'verdysas@gmail.com\', \'verdi sasmeka.png\') where id=12')
+ 4 APPPATH\Controllers\user\Beranda.php(38): CodeIgniter\Database\BaseConnection->query('UPDATE user (username, fullname, email, image)
+          VALUES (\'verdi sasmeka\', \'\', \'verdysas@gmail.com\', \'verdi sasmeka.png\') where id=12')
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\user\Beranda->ubahprofil()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\Beranda))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-07-01 01:26:18 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(username, fullname, email, image)
+          VALUES ('verdi sasmeka', '', 'v...' at line 1
+CRITICAL - 2022-07-01 01:26:18 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(username, fullname, email, image)
+          VALUES ('verdi sasmeka', '', 'v...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE user SET (username, fullname, email, image)
+          VALUES (\'verdi sasmeka\', \'\', \'verdysas@gmail.com\', \'verdi sasmeka.png\') where id=12', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE user SET (username, fullname, email, image)
+          VALUES (\'verdi sasmeka\', \'\', \'verdysas@gmail.com\', \'verdi sasmeka.png\') where id=12')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE user SET (username, fullname, email, image)
+          VALUES (\'verdi sasmeka\', \'\', \'verdysas@gmail.com\', \'verdi sasmeka.png\') where id=12')
+ 4 APPPATH\Controllers\user\Beranda.php(38): CodeIgniter\Database\BaseConnection->query('UPDATE user SET (username, fullname, email, image)
+          VALUES (\'verdi sasmeka\', \'\', \'verdysas@gmail.com\', \'verdi sasmeka.png\') where id=12')
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\user\Beranda->ubahprofil()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\Beranda))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-07-01 01:28:09 --> Table 'drive.user' doesn't exist
+CRITICAL - 2022-07-01 01:28:09 --> Table 'drive.user' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE user SET username=\'verdi sasmeka\', fullname=\'\', email=\'verdysas@gmail.com\', image=\'verdi sasmeka.png\' where id=12', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE user SET username=\'verdi sasmeka\', fullname=\'\', email=\'verdysas@gmail.com\', image=\'verdi sasmeka.png\' where id=12')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE user SET username=\'verdi sasmeka\', fullname=\'\', email=\'verdysas@gmail.com\', image=\'verdi sasmeka.png\' where id=12')
+ 4 APPPATH\Controllers\user\Beranda.php(37): CodeIgniter\Database\BaseConnection->query('UPDATE user SET username=\'verdi sasmeka\', fullname=\'\', email=\'verdysas@gmail.com\', image=\'verdi sasmeka.png\' where id=12')
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\user\Beranda->ubahprofil()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\Beranda))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
