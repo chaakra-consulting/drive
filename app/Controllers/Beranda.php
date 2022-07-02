@@ -41,27 +41,28 @@ foreach ($files as $file) {
 			$ekstensi = strtolower(end($x));
 			$ukuran	= $_FILES['foto']['size'];
 			$file_tmp = $_FILES['foto']['tmp_name'];	
- 
-      if(is_null($nama)){
-			if(in_array($ekstensi, $ekstensi_diperbolehkan) === true){
-				if($ukuran < 1044070){			
-					move_uploaded_file($file_tmp, FCPATH.'\foto\foto_'.$nama);
-					$query = $this->db->query("UPDATE users SET jabatan=$jabatan,username='$username', fullname='$fullname', email='$email', image='foto_$nama' where id=$id");
-					if($query){
-						session()->setFlashdata("pesan", "Informasi Profil Berhasil Diperbarui");
-					}else{
-						session()->setFlashdata("pesan-danger", "Gagal Upload Foto");
-					}
-				}else{
-					session()->setFlashdata("pesan-danger", "Ukuran File Terlalu Besar");
-				}
-			}else{
-				session()->setFlashdata("pesan-danger", "Extensi File Tidak Diperbolehkan");
-			}
-    }else{
-      $this->db->query("UPDATE users SET jabatan='$jabatan',username='$username', fullname='$fullname', email='$email' where id=$id");
-      session()->setFlashdata("pesan", "Informasi Profil Berhasil Diperbarui");
-    }
+
+      // echo $nama;
+      if($nama!=''){
+			  if(in_array($ekstensi, $ekstensi_diperbolehkan) === true){
+				  if($ukuran < 1044070){			
+				    move_uploaded_file($file_tmp, FCPATH.'\foto\foto_'.$nama);
+					  $query = $this->db->query("UPDATE users SET jabatan='$jabatan',username='$username', fullname='$fullname', email='$email', image='foto_$nama' where id=$id");
+					    if($query){
+						    session()->setFlashdata("pesan", "Informasi Profil Berhasil Diperbarui");
+					    }else{
+						    session()->setFlashdata("pesan-danger", "Gagal Upload Foto");
+					    }
+				  }else{
+					  session()->setFlashdata("pesan-danger", "Ukuran File Terlalu Besar");
+				  }
+			  }else{
+				  session()->setFlashdata("pesan-danger", "Extensi File Tidak Diperbolehkan");
+			  }
+      }else{
+        $this->db->query("UPDATE users SET jabatan='$jabatan',username='$username', fullname='$fullname', email='$email' where id=$id");
+        session()->setFlashdata("pesan", "Informasi Profil Berhasil Diperbarui");
+      }
       return redirect()->to('/');
     }
     public function ubahsosmed()

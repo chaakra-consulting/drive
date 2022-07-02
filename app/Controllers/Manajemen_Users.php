@@ -26,9 +26,32 @@ class Manajemen_Users extends BaseController
     }
     public function reaktifusers()
     {
-      $id = $this->request->getPost("id-nonaktif");
+      $id = $this->request->getPost("id-aktif");
       $this->db->query("UPDATE users SET deleted_at=null where id=$id");
       return redirect()->to('/manajemenusers');
     }
-    
+    public function detailsuser()
+    {
+    $id = $this->request->getPost("id-detail");
+    $data = [
+      'details' => $this->db->query("SELECT 
+      a.deleted_at,
+      a.active,
+      a.`id`,
+      a.`fullname`,
+      a.`jabatan`,
+      c.name,
+      a.`email`,
+      a.`status`,
+      a.image,
+      a.`github`,
+      a.`linkedin`,
+      a.`twitter`,
+      a.`instagram`,
+      a.`portofolio`,
+      a.`created_at` 
+      FROM users a LEFT JOIN auth_groups_users b ON a.`id`=b.user_id LEFT JOIN auth_groups c ON b.group_id = c.id WHERE a.id=$id")->getResult()
+    ];
+    return view('detailusers',$data);
+  }
 }

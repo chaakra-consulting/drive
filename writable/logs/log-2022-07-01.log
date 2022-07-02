@@ -141,3 +141,291 @@ in APPPATH\Views\manajemen_users.php on line 62.
  8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-07-01 22:17:06 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Programmer 2,username='Sasmeka', fullname='Sasmeka', email='sasmekabesat@gmai...' at line 1
+CRITICAL - 2022-07-01 22:17:06 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Programmer 2,username='Sasmeka', fullname='Sasmeka', email='sasmekabesat@gmai...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE users SET jabatan=Junior Programmer 2,username=\'Sasmeka\', fullname=\'Sasmeka\', email=\'sasmekabesat@gmail.com\', image=\'foto_Sasmeka_verdi sasmeka 5.png\' where id=13', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE users SET jabatan=Junior Programmer 2,username=\'Sasmeka\', fullname=\'Sasmeka\', email=\'sasmekabesat@gmail.com\', image=\'foto_Sasmeka_verdi sasmeka 5.png\' where id=13')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE users SET jabatan=Junior Programmer 2,username=\'Sasmeka\', fullname=\'Sasmeka\', email=\'sasmekabesat@gmail.com\', image=\'foto_Sasmeka_verdi sasmeka 5.png\' where id=13')
+ 4 APPPATH\Controllers\Beranda.php(49): CodeIgniter\Database\BaseConnection->query('UPDATE users SET jabatan=Junior Programmer 2,username=\'Sasmeka\', fullname=\'Sasmeka\', email=\'sasmekabesat@gmail.com\', image=\'foto_Sasmeka_verdi sasmeka 5.png\' where id=13')
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Beranda->ubahprofil()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Beranda))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-07-01 22:17:54 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Programmer 2,username='Sasmeka', fullname='Sasmeka', email='sasmekabesat@gmai...' at line 1
+CRITICAL - 2022-07-01 22:17:54 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Programmer 2,username='Sasmeka', fullname='Sasmeka', email='sasmekabesat@gmai...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE users SET jabatan=Junior Programmer 2,username=\'Sasmeka\', fullname=\'Sasmeka\', email=\'sasmekabesat@gmail.com\', image=\'foto_verdi sasmeka 5.png\' where id=13', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE users SET jabatan=Junior Programmer 2,username=\'Sasmeka\', fullname=\'Sasmeka\', email=\'sasmekabesat@gmail.com\', image=\'foto_verdi sasmeka 5.png\' where id=13')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE users SET jabatan=Junior Programmer 2,username=\'Sasmeka\', fullname=\'Sasmeka\', email=\'sasmekabesat@gmail.com\', image=\'foto_verdi sasmeka 5.png\' where id=13')
+ 4 APPPATH\Controllers\Beranda.php(49): CodeIgniter\Database\BaseConnection->query('UPDATE users SET jabatan=Junior Programmer 2,username=\'Sasmeka\', fullname=\'Sasmeka\', email=\'sasmekabesat@gmail.com\', image=\'foto_verdi sasmeka 5.png\' where id=13')
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Beranda->ubahprofil()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Beranda))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-07-01 22:48:42 --> Column 'id' in where clause is ambiguous
+CRITICAL - 2022-07-01 22:48:42 --> Column 'id' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT a.deleted_at,a.active,a.`id`,a.`fullname`,a.`jabatan`,c.name,a.`email`,a.`status`,a.image FROM users a LEFT JOIN auth_groups_users b ON a.`id`=b.user_id LEFT JOIN auth_groups c ON b.group_id = c.id where id=12', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT a.deleted_at,a.active,a.`id`,a.`fullname`,a.`jabatan`,c.name,a.`email`,a.`status`,a.image FROM users a LEFT JOIN auth_groups_users b ON a.`id`=b.user_id LEFT JOIN auth_groups c ON b.group_id = c.id where id=12')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT a.deleted_at,a.active,a.`id`,a.`fullname`,a.`jabatan`,c.name,a.`email`,a.`status`,a.image FROM users a LEFT JOIN auth_groups_users b ON a.`id`=b.user_id LEFT JOIN auth_groups c ON b.group_id = c.id where id=12')
+ 4 APPPATH\Controllers\Manajemen_Users.php(37): CodeIgniter\Database\BaseConnection->query('SELECT a.deleted_at,a.active,a.`id`,a.`fullname`,a.`jabatan`,c.name,a.`email`,a.`status`,a.image FROM users a LEFT JOIN auth_groups_users b ON a.`id`=b.user_id LEFT JOIN auth_groups c ON b.group_id = c.id where id=12')
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Manajemen_Users->detailsuser()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manajemen_Users))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-07-01 22:48:51 --> Column 'id' in where clause is ambiguous
+CRITICAL - 2022-07-01 22:48:51 --> Column 'id' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT a.deleted_at,a.active,a.`id`,a.`fullname`,a.`jabatan`,c.name,a.`email`,a.`status`,a.image FROM users a LEFT JOIN auth_groups_users b ON a.`id`=b.user_id LEFT JOIN auth_groups c ON b.group_id = c.id where id=12', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT a.deleted_at,a.active,a.`id`,a.`fullname`,a.`jabatan`,c.name,a.`email`,a.`status`,a.image FROM users a LEFT JOIN auth_groups_users b ON a.`id`=b.user_id LEFT JOIN auth_groups c ON b.group_id = c.id where id=12')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT a.deleted_at,a.active,a.`id`,a.`fullname`,a.`jabatan`,c.name,a.`email`,a.`status`,a.image FROM users a LEFT JOIN auth_groups_users b ON a.`id`=b.user_id LEFT JOIN auth_groups c ON b.group_id = c.id where id=12')
+ 4 APPPATH\Controllers\Manajemen_Users.php(37): CodeIgniter\Database\BaseConnection->query('SELECT a.deleted_at,a.active,a.`id`,a.`fullname`,a.`jabatan`,c.name,a.`email`,a.`status`,a.image FROM users a LEFT JOIN auth_groups_users b ON a.`id`=b.user_id LEFT JOIN auth_groups c ON b.group_id = c.id where id=12')
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Manajemen_Users->detailsuser()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manajemen_Users))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-07-01 22:53:28 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM users a LEFT JOIN auth_groups_users b ON a.`id`=b.user_id LEFT JOIN auth...' at line 17
+CRITICAL - 2022-07-01 22:53:28 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM users a LEFT JOIN auth_groups_users b ON a.`id`=b.user_id LEFT JOIN auth...' at line 17
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT 
+      a.deleted_at,
+      a.active,
+      a.`id`,
+      a.`fullname`,
+      a.`jabatan`,
+      c.name,
+      a.`email`,
+      a.`status`,
+      a.image,
+      a.`github`,
+      a.`linkedin`,
+      a.`twitter`,
+      a.`instagram`,
+      a.`portofolio`,
+      a.`created_at`, 
+      FROM users a LEFT JOIN auth_groups_users b ON a.`id`=b.user_id LEFT JOIN auth_groups c ON b.group_id = c.id WHERE id=13', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+      a.deleted_at,
+      a.active,
+      a.`id`,
+      a.`fullname`,
+      a.`jabatan`,
+      c.name,
+      a.`email`,
+      a.`status`,
+      a.image,
+      a.`github`,
+      a.`linkedin`,
+      a.`twitter`,
+      a.`instagram`,
+      a.`portofolio`,
+      a.`created_at`, 
+      FROM users a LEFT JOIN auth_groups_users b ON a.`id`=b.user_id LEFT JOIN auth_groups c ON b.group_id = c.id WHERE id=13')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+      a.deleted_at,
+      a.active,
+      a.`id`,
+      a.`fullname`,
+      a.`jabatan`,
+      c.name,
+      a.`email`,
+      a.`status`,
+      a.image,
+      a.`github`,
+      a.`linkedin`,
+      a.`twitter`,
+      a.`instagram`,
+      a.`portofolio`,
+      a.`created_at`, 
+      FROM users a LEFT JOIN auth_groups_users b ON a.`id`=b.user_id LEFT JOIN auth_groups c ON b.group_id = c.id WHERE id=13')
+ 4 APPPATH\Controllers\Manajemen_Users.php(53): CodeIgniter\Database\BaseConnection->query('SELECT 
+      a.deleted_at,
+      a.active,
+      a.`id`,
+      a.`fullname`,
+      a.`jabatan`,
+      c.name,
+      a.`email`,
+      a.`status`,
+      a.image,
+      a.`github`,
+      a.`linkedin`,
+      a.`twitter`,
+      a.`instagram`,
+      a.`portofolio`,
+      a.`created_at`, 
+      FROM users a LEFT JOIN auth_groups_users b ON a.`id`=b.user_id LEFT JOIN auth_groups c ON b.group_id = c.id WHERE id=13')
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Manajemen_Users->detailsuser()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manajemen_Users))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-07-01 22:53:56 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM users a LEFT JOIN auth_groups_users b ON a.`id`=b.user_id LEFT JOIN auth...' at line 17
+CRITICAL - 2022-07-01 22:53:56 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM users a LEFT JOIN auth_groups_users b ON a.`id`=b.user_id LEFT JOIN auth...' at line 17
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT 
+      a.deleted_at,
+      a.active,
+      a.`id`,
+      a.`fullname`,
+      a.`jabatan`,
+      c.name,
+      a.`email`,
+      a.`status`,
+      a.image,
+      a.`github`,
+      a.`linkedin`,
+      a.`twitter`,
+      a.`instagram`,
+      a.`portofolio`,
+      a.`created_at`, 
+      FROM users a LEFT JOIN auth_groups_users b ON a.`id`=b.user_id LEFT JOIN auth_groups c ON b.group_id = c.id WHERE a.id=13', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+      a.deleted_at,
+      a.active,
+      a.`id`,
+      a.`fullname`,
+      a.`jabatan`,
+      c.name,
+      a.`email`,
+      a.`status`,
+      a.image,
+      a.`github`,
+      a.`linkedin`,
+      a.`twitter`,
+      a.`instagram`,
+      a.`portofolio`,
+      a.`created_at`, 
+      FROM users a LEFT JOIN auth_groups_users b ON a.`id`=b.user_id LEFT JOIN auth_groups c ON b.group_id = c.id WHERE a.id=13')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+      a.deleted_at,
+      a.active,
+      a.`id`,
+      a.`fullname`,
+      a.`jabatan`,
+      c.name,
+      a.`email`,
+      a.`status`,
+      a.image,
+      a.`github`,
+      a.`linkedin`,
+      a.`twitter`,
+      a.`instagram`,
+      a.`portofolio`,
+      a.`created_at`, 
+      FROM users a LEFT JOIN auth_groups_users b ON a.`id`=b.user_id LEFT JOIN auth_groups c ON b.group_id = c.id WHERE a.id=13')
+ 4 APPPATH\Controllers\Manajemen_Users.php(53): CodeIgniter\Database\BaseConnection->query('SELECT 
+      a.deleted_at,
+      a.active,
+      a.`id`,
+      a.`fullname`,
+      a.`jabatan`,
+      c.name,
+      a.`email`,
+      a.`status`,
+      a.image,
+      a.`github`,
+      a.`linkedin`,
+      a.`twitter`,
+      a.`instagram`,
+      a.`portofolio`,
+      a.`created_at`, 
+      FROM users a LEFT JOIN auth_groups_users b ON a.`id`=b.user_id LEFT JOIN auth_groups c ON b.group_id = c.id WHERE a.id=13')
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Manajemen_Users->detailsuser()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manajemen_Users))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-07-01 22:54:00 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM users a LEFT JOIN auth_groups_users b ON a.`id`=b.user_id LEFT JOIN auth...' at line 17
+CRITICAL - 2022-07-01 22:54:00 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM users a LEFT JOIN auth_groups_users b ON a.`id`=b.user_id LEFT JOIN auth...' at line 17
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT 
+      a.deleted_at,
+      a.active,
+      a.`id`,
+      a.`fullname`,
+      a.`jabatan`,
+      c.name,
+      a.`email`,
+      a.`status`,
+      a.image,
+      a.`github`,
+      a.`linkedin`,
+      a.`twitter`,
+      a.`instagram`,
+      a.`portofolio`,
+      a.`created_at`, 
+      FROM users a LEFT JOIN auth_groups_users b ON a.`id`=b.user_id LEFT JOIN auth_groups c ON b.group_id = c.id WHERE a.id=13', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+      a.deleted_at,
+      a.active,
+      a.`id`,
+      a.`fullname`,
+      a.`jabatan`,
+      c.name,
+      a.`email`,
+      a.`status`,
+      a.image,
+      a.`github`,
+      a.`linkedin`,
+      a.`twitter`,
+      a.`instagram`,
+      a.`portofolio`,
+      a.`created_at`, 
+      FROM users a LEFT JOIN auth_groups_users b ON a.`id`=b.user_id LEFT JOIN auth_groups c ON b.group_id = c.id WHERE a.id=13')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+      a.deleted_at,
+      a.active,
+      a.`id`,
+      a.`fullname`,
+      a.`jabatan`,
+      c.name,
+      a.`email`,
+      a.`status`,
+      a.image,
+      a.`github`,
+      a.`linkedin`,
+      a.`twitter`,
+      a.`instagram`,
+      a.`portofolio`,
+      a.`created_at`, 
+      FROM users a LEFT JOIN auth_groups_users b ON a.`id`=b.user_id LEFT JOIN auth_groups c ON b.group_id = c.id WHERE a.id=13')
+ 4 APPPATH\Controllers\Manajemen_Users.php(53): CodeIgniter\Database\BaseConnection->query('SELECT 
+      a.deleted_at,
+      a.active,
+      a.`id`,
+      a.`fullname`,
+      a.`jabatan`,
+      c.name,
+      a.`email`,
+      a.`status`,
+      a.image,
+      a.`github`,
+      a.`linkedin`,
+      a.`twitter`,
+      a.`instagram`,
+      a.`portofolio`,
+      a.`created_at`, 
+      FROM users a LEFT JOIN auth_groups_users b ON a.`id`=b.user_id LEFT JOIN auth_groups c ON b.group_id = c.id WHERE a.id=13')
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Manajemen_Users->detailsuser()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manajemen_Users))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-01 22:56:39 --> Undefined variable: detail
+in APPPATH\Views\detailusers.php on line 47.
+ 1 APPPATH\Views\detailusers.php(47): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: detail', 'APPPATH\\Views\\detailusers.php', 47, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\detailusers.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('detailusers', [], true)
+ 5 APPPATH\Controllers\Manajemen_Users.php(55): view('detailusers', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Manajemen_Users->detailsuser()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manajemen_Users))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

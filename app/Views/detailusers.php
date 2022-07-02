@@ -13,7 +13,8 @@ use CodeIgniter\Images\Image;
 <div class="breadcrumb-header justify-content-between">
   <div class="my-auto">
     <div class="d-flex">
-      <h4 class="content-title mb-0 my-auto">Beranda</h4><span
+      <h4 class="content-title mb-0 my-auto">Manajemen Pengguna</h4>
+      <span class="text-muted mt-1 tx-13 ms-2 mb-0">/ Detail / <?= $details[0]->fullname ;?></span>
     </div>
   </div>
 </div>
@@ -27,12 +28,12 @@ use CodeIgniter\Images\Image;
         <div class="ps-0">
           <div class="main-profile-overview">
             <div class="main-img-user profile-user">
-              <img alt="" src="<?= base_url(); ?>/foto/<?= user()->image?>">
+              <img alt="" src="<?= base_url(); ?>/foto/<?= $details[0]->image ;?>">
             </div>
             <div class="d-flex justify-content-between mg-b-20">
               <div>
-                <h5 class="main-profile-name"><?= user()->fullname; ?></h5>
-                <p class="main-profile-name-text"><?= user()->jabatan; ?></p>
+                <h5 class="main-profile-name"><?= $details[0]->fullname ;?></h5>
+                <p class="main-profile-name-text"><?= $details[0]->jabatan ;?></p>
               </div>
             </div>
             <hr class="mg-y-30">
@@ -43,7 +44,7 @@ use CodeIgniter\Images\Image;
                 <ion-icon name="mail"></ion-icon>
                 </div>
                 <div class="media-body">
-                  <span>Email</span> <a href="<?= user()->email; ?>"><?= user()->email; ?></a>
+                  <span>Email</span> <a href="<?= $details[0]->email; ?>"><?= $details[0]->email; ?></a>
                 </div>
               </div>  
             <div class="media">
@@ -51,7 +52,7 @@ use CodeIgniter\Images\Image;
                   <i class="icon ion-logo-github"></i>
                 </div>
                 <div class="media-body">
-                  <span>Github</span> <a href="<?= user()->github; ?>"><?= user()->github; ?></a>
+                  <span>Github</span> <a href="<?= $details[0]->github; ?>"><?= $details[0]->github; ?></a>
                 </div>
               </div>
               <div class="media">
@@ -59,7 +60,7 @@ use CodeIgniter\Images\Image;
                   <i class="icon ion-logo-twitter"></i>
                 </div>
                 <div class="media-body">
-                  <span>Twitter</span> <a href="<?= user()->twitter; ?>"><?= user()->twitter; ?></a>
+                  <span>Twitter</span> <a href="<?= $details[0]->twitter; ?>"><?= $details[0]->twitter; ?></a>
                 </div>
               </div>
               <div class="media">
@@ -67,7 +68,7 @@ use CodeIgniter\Images\Image;
                   <i class="icon ion-logo-linkedin"></i>
                 </div>
                 <div class="media-body">
-                  <span>Linkedin</span> <a href="<?= user()->linkedin; ?>"><?= user()->linkedin; ?></a>
+                  <span>Linkedin</span> <a href="<?= $details[0]->linkedin; ?>"><?= $details[0]->linkedin; ?></a>
                 </div>
               </div>
               <div class="media">
@@ -75,7 +76,7 @@ use CodeIgniter\Images\Image;
                   <i class="icon ion-md-link"></i>
                 </div>
                 <div class="media-body">
-                  <span>Portfolio</span> <a href="<?= user()->portofolio; ?>"><?= user()->portofolio; ?></a>
+                  <span>Portfolio</span> <a href="<?= $details[0]->portofolio; ?>"><?= $details[0]->portofolio; ?></a>
                 </div>
               </div>
             </div>
@@ -132,89 +133,33 @@ use CodeIgniter\Images\Image;
         </div>
       </div>
     </div>
-    <div class="card">
-    
-    <div class="card-body">
-      <?php if(session()->getFlashdata('pesan')) { ?>
-    <div class="alert alert-primary" role="alert"><?= session()->getFlashdata('pesan');?></div>
-<?php }elseif(session()->getFlashdata('pesan-danger')){ ?>
-  <div class="alert alert-danger" role="alert"><?= session()->getFlashdata('pesan-danger');?></div>
-  <?php } ?>
-    <div class="tabs-menu ">
+            <div class="card">
+							<div class="card-body">
+								<div class="tabs-menu ">
 									<!-- Tabs -->
 									<ul class="nav nav-tabs profile navtab-custom panel-tabs">
 										<li class="">
 											<a href="#home" data-bs-toggle="tab" class="active" aria-expanded="true"> <span
 													class="visible-xs"><i
 														class="las la-user-circle tx-16 me-1"></i></span> <span
-													class="hidden-xs">Profil</span> </a>
-										</li>
-										<li class="">
-											<a href="#settings" data-bs-toggle="tab" aria-expanded="false"> <span
-													class="visible-xs"><i class="las la-cog tx-16 me-1"></i></span>
-												<span class="hidden-xs">Sosial Media</span> </a>
+													class="hidden-xs">Detail Profil</span> </a>
 										</li>
 									</ul>
 								</div>
 								<div class="tab-content border-start border-bottom border-right border-top-0 p-4 br-dark">
 									<div class="tab-pane active" id="home">
-                  <form action="<?php base_url()?>/ubahprofil" method="POST" enctype="multipart/form-data">
-											<div class="form-group">
-												<label for="FullName">Nama Lengkap</label>
-                        <input type="hidden" value="<?= user()->id; ?>" name="id" class="form-control">
-												<input type="text" value="<?= user()->fullname; ?>" name="fullname" id="FullName" class="form-control">
-											</div>
-											<div class="form-group">
-												<label for="Email">Email</label>
-												<input type="email" value="<?= user()->email; ?>" id="Email" name="email"
-													class="form-control">
-											</div>
-											<div class="form-group">
-												<label for="Username">Username</label>
-												<input type="text" value="<?= user()->username; ?>" id="Username" name="username" class="form-control">
-											</div>
-                      <div class="form-group">
-												<label for="Username">Jabatan</label>
-												<input type="text" value="<?= user()->jabatan; ?>" id="Username" name="jabatan" class="form-control">
-											</div>
-											<div class="form-group">
-												<label for="Password">Ubah Foto</label>
-												<input type="file" name="foto" id="File" class="form-control">
-											</div>
-											<button class="btn btn-primary waves-effect waves-light w-md" type="submit">Simpan</button>
-									</form>
-									</div>
-									<div class="tab-pane" id="settings">
-                  <form action="<?php base_url()?>/ubahsosmed" method="POST">
-											<div class="form-group">
-												<label for="instagram">Instagram</label>
-                        <input type="hidden" value="<?= user()->id; ?>" name="id" class="form-control">
-												<input type="text" id="instagram" name="instagram" class="form-control" value="<?= user()->instagram; ?>">
-											</div>
-											<div class="form-group">
-												<label for="github">Github</label>
-												<input type="text" id="github" name="github" class="form-control" value="<?= user()->github; ?>">
-											</div>
-											<div class="form-group">
-												<label for="twitter">Twitter</label>
-												<input type="text" value="<?= user()->twitter; ?>" name="twitter" id="twitter" class="form-control">
-											</div>
-											<div class="form-group">
-												<label for="linkedin">LinkedIn</label>
-												<input type="text" id="linkedin" value="<?= user()->linkedin; ?>" name="linkedin" class="form-control">
-											</div>
-											<div class="form-group">
-												<label for="portofolio">Portofolio</label>
-												<input type="text" id="portofolio" name="portofolio" value="<?= user()->portofolio; ?>"
-													class="form-control">
-											</div>
-											<button class="btn btn-primary waves-effect waves-light w-md"
-												type="submit">Simpan</button>
-										</form>
+                    <h4 class="tx-15 text-uppercase mb-3">Grub Akses</h4>
+										<p class="m-b-5"><?= $details[0]->name ;?></p>
+                    <h4 class="tx-15 text-uppercase mb-3">Status</h4>
+										<p class="m-b-5"><?php if($details[0]->deleted_at==''){if($details[0]->active=='1'){echo 'Aktif';}else{echo 'Belum Verifikasi';}}else{echo 'Tidak Aktif';} ;?></p>
+                    <h4 class="tx-15 text-uppercase mb-3">Ditambahkan</h4>
+										<p class="m-b-5"><?= $details[0]->created_at ;?></p>
+                    <h4 class="tx-15 text-uppercase mb-3">Dinonaktifkan</h4>
+										<p class="m-b-5"><?php if($details[0]->deleted_at==''){echo '-';}else{echo $details[0]->deleted_at;}?></p>
 									</div>
 								</div>
 							</div>
-    </div>
+						</div>
   </div>
 </div>
 <!-- row closed -->

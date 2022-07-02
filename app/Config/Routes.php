@@ -42,6 +42,7 @@ $routes->add('/ubahsosmed', 'Beranda::ubahsosmed');
 $routes->add('/manajemenusers', 'Manajemen_Users::index', ['filter' => 'role:admin,super admin']);
 $routes->add('/nonaktifusers', 'Manajemen_Users::nonaktifusers', ['filter' => 'role:admin,super admin']);
 $routes->add('/reaktifusers', 'Manajemen_Users::reaktifusers', ['filter' => 'role:admin,super admin']);
+$routes->add('/detailsuser', 'Manajemen_Users::detailsuser', ['filter' => 'role:admin,super admin']);
 
 $routes->add('/coba', 'Beranda::coba');
 $routes->add('/coba2', 'Beranda::coba2');
