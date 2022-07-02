@@ -69,21 +69,38 @@ use CodeIgniter\Images\Image;
 														<?php }?>
 													</td>
 													<td>
-														<a href="mailto:<?=$a->email?>"><?= $a->email ;?></a>
-													</td>
-													<td>
 														<a ><?= $a->name ;?></a>
 													</td>
 													<td>
-														<a href="#" class="btn btn-sm btn-primary">
-															<i class="las la-search"></i>
-														</a>
-														<a href="#" class="btn btn-sm btn-info btn-b">
-															<i class="las la-pen"></i>
-														</a>
-														<a href="#" class="btn btn-sm btn-danger">
-															<i class="las la-trash"></i>
-														</a>
+														<a href="mailto:<?=$a->email?>"><?= $a->email ;?></a>
+													</td>
+													<td>
+														<div class='row'>
+															<div class="col col-md-4">
+																<form action="/nonaktifusers" method="post">
+																	<input type="hidden" value="<?= $a->id; ?>" name="id-nonaktif" class="form-control">
+																	<button class="btn btn-sm btn-primary" type="submit">
+																		<i class="las la-search"></i>
+																	</button>
+																</form>
+															</div>
+															<div class="col  col-md-4">
+																<form action="/reaktifusers" method="post">
+																	<input type="hidden" value="<?= $a->id; ?>" name="id-nonaktif" class="form-control">
+																	<button class="btn btn-sm btn-info btn-b" type="submit">
+																		<i class="las la-check"></i>
+																	</button>
+																</form>
+															</div>
+															<div class="col  col-md-4">
+																<form action="/nonaktifusers" method="post">
+																	<input type="hidden" value="<?= $a->id; ?>" name="id-nonaktif" class="form-control">
+																	<button class="btn btn-sm btn-danger" type="submit">
+																		<i class="las la-times"></i>
+																	</button>
+																</form>
+															</div>
+														</div>
 													</td>
 												</tr>
 												<?php } ?>
