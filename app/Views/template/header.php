@@ -13,38 +13,53 @@
 
 	<!-- Title -->
 	<title> Drive - Chaakra Consulting </title>
-
 	<!-- Favicon -->
 	<link rel="icon" href="<?= base_url(); ?>/assets-themes/img/brand/favicon.png" type="image/x-icon" />
-
 	<!-- Icons css -->
 	<link href="<?= base_url(); ?>/assets-themes/css/icons.css" rel="stylesheet">
-
 	<!-- Bootstrap css -->
 	<link href="<?= base_url(); ?>/assets-themes/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
+	<!-- Internal Data table css -->
+	<link href="<?= base_url(); ?>/assets-themes/plugins/datatable/datatables.min.css" rel="stylesheet" />
+	<link href="<?= base_url(); ?>/assets-themes/plugins/datatable/responsive.dataTables.min.css" rel="stylesheet">
+	<link href="<?= base_url(); ?>/assets-themes/plugins/datatable/responsive.bootstrap5.css" rel="stylesheet">
+	<link href="<?= base_url(); ?>/assets-themes/plugins/datatable/css/buttons.bootstrap5.min.css" rel="stylesheet">
+	<link href="<?= base_url(); ?>/assets-themes/plugins/datatable/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+	<link href="<?= base_url(); ?>/assets-themes/plugins/datatable/css/jquery.dataTables.min.css" rel="stylesheet">
+	<link href="<?= base_url(); ?>/assets-themes/plugins/select2/css/select2.min.css" rel="stylesheet">
 	<!--  Right-sidemenu css -->
 	<link href="<?= base_url(); ?>/assets-themes/plugins/sidebar/sidebar.css" rel="stylesheet">
-
 	<!-- P-scroll bar css-->
 	<link href="<?= base_url(); ?>/assets-themes/plugins/perfect-scrollbar/p-scrollbar.css" rel="stylesheet" />
-
+	<!--- Select2 css --->
+	<link href="<?= base_url(); ?>/assets-themes/plugins/select2/css/select2.min.css" rel="stylesheet">
+	<!---Internal Owl Carousel css-->
+	<link href="<?= base_url(); ?>/assets-themes/plugins/owl-carousel/owl.carousel.css" rel="stylesheet">
+	<!---Internal  Multislider css-->
+	<link href="<?= base_url(); ?>/assets-themes/plugins/multislider/multislider.css" rel="stylesheet">
 	<!-- Sidemenu css -->
 	<link rel="stylesheet" href="<?= base_url(); ?>/assets-themes/css/sidemenu.css">
-
 	<!--- Style css --->
 	<link href="<?= base_url(); ?>/assets-themes/css/style.css" rel="stylesheet">
 	<link href="<?= base_url(); ?>/assets-themes/css/boxed.css" rel="stylesheet">
 	<link href="<?= base_url(); ?>/assets-themes/css/dark-boxed.css" rel="stylesheet">
-
 	<!--- Dark-mode css --->
 	<link href="<?= base_url(); ?>/assets-themes/css/style-dark.css" rel="stylesheet">
-
 	<!---Skinmodes css-->
 	<link href="<?= base_url(); ?>/assets-themes/css/skin-modes.css" rel="stylesheet" />
-
 	<!--- Animations css-->
 	<link href="<?= base_url(); ?>/assets-themes/css/animate.css" rel="stylesheet">
+	<!--Internal  Date time picker-slider css -->
+	<link href="<?= base_url(); ?>/assets-themes/plugins/amazeui-datetimepicker/css/amazeui.datetimepicker.css" rel="stylesheet">
+	<link href="<?= base_url(); ?>/assets-themes/plugins/jquery-simple-datetimepicker/jquery.simple-dtpicker.css" rel="stylesheet">
+	<link href="<?= base_url(); ?>/assets-themes/plugins/pickerjs/picker.min.css" rel="stylesheet">
+	<!-- Internal Spectrum-colorpicker css -->
+	<link href="<?= base_url(); ?>/assets-themes/plugins/spectrum-colorpicker/spectrum.css" rel="stylesheet">
+	<!--- Internal Select2 css-->
+	<link href="<?= base_url(); ?>/assets-themes/plugins/select2/css/select2.min.css" rel="stylesheet">
+	<!--Internal  Quill css -->
+	<link href="<?= base_url(); ?>/assets-themes/plugins/quill/quill.snow.css" rel="stylesheet">
+	<link href="<?= base_url(); ?>/assets-themes/plugins/quill/quill.bubble.css" rel="stylesheet">
 
 </head>
 

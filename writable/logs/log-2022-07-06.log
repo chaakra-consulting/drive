@@ -1,0 +1,258 @@
+ERROR - 2022-07-06 10:17:20 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+CRITICAL - 2022-07-06 10:17:20 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT a.`judul`,a.`id`,a.`nama_file`,a.`pesan`,c.`fullname`,b.`nama`,b.`tahun`,a.`create_at` FROM detail_data_project a LEFT JOIN data_project b ON a.`id_project`=b.`id` LEFT JOIN users c ON a.`id_pembuat`=c.`id` WHERE a.`id_project`=', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT a.`judul`,a.`id`,a.`nama_file`,a.`pesan`,c.`fullname`,b.`nama`,b.`tahun`,a.`create_at` FROM detail_data_project a LEFT JOIN data_project b ON a.`id_project`=b.`id` LEFT JOIN users c ON a.`id_pembuat`=c.`id` WHERE a.`id_project`=')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT a.`judul`,a.`id`,a.`nama_file`,a.`pesan`,c.`fullname`,b.`nama`,b.`tahun`,a.`create_at` FROM detail_data_project a LEFT JOIN data_project b ON a.`id_project`=b.`id` LEFT JOIN users c ON a.`id_pembuat`=c.`id` WHERE a.`id_project`=')
+ 4 APPPATH\Controllers\Manajemen_Detail_Data_Project.php(19): CodeIgniter\Database\BaseConnection->query('SELECT a.`judul`,a.`id`,a.`nama_file`,a.`pesan`,c.`fullname`,b.`nama`,b.`tahun`,a.`create_at` FROM detail_data_project a LEFT JOIN data_project b ON a.`id_project`=b.`id` LEFT JOIN users c ON a.`id_pembuat`=c.`id` WHERE a.`id_project`=')
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Manajemen_Detail_Data_Project->index()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manajemen_Detail_Data_Project))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-06 10:48:57 --> move_uploaded_file(C:\xampp\htdocs\drive\public\\file\file_2-Laporan Akhir-12-2022-07-06 10:48:57): failed to open stream: No such file or directory
+in APPPATH\Controllers\Manajemen_Detail_Data_Project.php on line 54.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'move_uploaded_file(C:\\xampp\\htdocs\\drive\\public\\\\file\\file_2-Laporan Akhir-12-2022-07-06 10:48:57): failed to open stream: No such file or directory', 'APPPATH\\Controllers\\Manajemen_Detail_Data_Project.php', 54, [...])
+ 2 APPPATH\Controllers\Manajemen_Detail_Data_Project.php(54): move_uploaded_file('C:\\xampp\\tmp\\php782F.tmp', 'FCPATH\\\\file\\file_2-Laporan Akhir-12-2022-07-06 10:48:57')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Manajemen_Detail_Data_Project->tambah()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manajemen_Detail_Data_Project))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-06 10:49:49 --> move_uploaded_file(C:\xampp\htdocs\drive\public\file\file_2-Laporan Akhir-12-2022-07-06 10:49:49): failed to open stream: No such file or directory
+in APPPATH\Controllers\Manajemen_Detail_Data_Project.php on line 54.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'move_uploaded_file(C:\\xampp\\htdocs\\drive\\public\\file\\file_2-Laporan Akhir-12-2022-07-06 10:49:49): failed to open stream: No such file or directory', 'APPPATH\\Controllers\\Manajemen_Detail_Data_Project.php', 54, [...])
+ 2 APPPATH\Controllers\Manajemen_Detail_Data_Project.php(54): move_uploaded_file('C:\\xampp\\tmp\\php442B.tmp', 'FCPATH\\file\\file_2-Laporan Akhir-12-2022-07-06 10:49:49')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Manajemen_Detail_Data_Project->tambah()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manajemen_Detail_Data_Project))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-06 10:53:24 --> move_uploaded_file(C:\xampp\htdocs\drive\public\file\file_2-Laporan Akhir-12-2022-07-06 10:53:24.png): failed to open stream: No such file or directory
+in APPPATH\Controllers\Manajemen_Detail_Data_Project.php on line 56.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'move_uploaded_file(C:\\xampp\\htdocs\\drive\\public\\file\\file_2-Laporan Akhir-12-2022-07-06 10:53:24.png): failed to open stream: No such file or directory', 'APPPATH\\Controllers\\Manajemen_Detail_Data_Project.php', 56, [...])
+ 2 APPPATH\Controllers\Manajemen_Detail_Data_Project.php(56): move_uploaded_file('C:\\xampp\\tmp\\php89E1.tmp', 'FCPATH\\file\\file_2-Laporan Akhir-12-2022-07-06 10:53:24.png')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Manajemen_Detail_Data_Project->tambah()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manajemen_Detail_Data_Project))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-06 10:55:03 --> move_uploaded_file(C:\xampp\htdocs\drive\public\\file\file_2-Laporan Akhir-12-2022-07-06 10:55:03.png): failed to open stream: No such file or directory
+in APPPATH\Controllers\Manajemen_Detail_Data_Project.php on line 56.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'move_uploaded_file(C:\\xampp\\htdocs\\drive\\public\\\\file\\file_2-Laporan Akhir-12-2022-07-06 10:55:03.png): failed to open stream: No such file or directory', 'APPPATH\\Controllers\\Manajemen_Detail_Data_Project.php', 56, [...])
+ 2 APPPATH\Controllers\Manajemen_Detail_Data_Project.php(56): move_uploaded_file('C:\\xampp\\tmp\\phpDF1.tmp', 'FCPATH\\\\file\\file_2-Laporan Akhir-12-2022-07-06 10:55:03.png')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Manajemen_Detail_Data_Project->tambah()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manajemen_Detail_Data_Project))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-06 10:55:43 --> move_uploaded_file(C:\xampp\htdocs\drive\public\\file\file_2-Laporan Akhir-12-2022-07-06 10:55:43.png): failed to open stream: No such file or directory
+in APPPATH\Controllers\Manajemen_Detail_Data_Project.php on line 56.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'move_uploaded_file(C:\\xampp\\htdocs\\drive\\public\\\\file\\file_2-Laporan Akhir-12-2022-07-06 10:55:43.png): failed to open stream: No such file or directory', 'APPPATH\\Controllers\\Manajemen_Detail_Data_Project.php', 56, [...])
+ 2 APPPATH\Controllers\Manajemen_Detail_Data_Project.php(56): move_uploaded_file('C:\\xampp\\tmp\\phpA968.tmp', 'FCPATH\\\\file\\file_2-Laporan Akhir-12-2022-07-06 10:55:43.png')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Manajemen_Detail_Data_Project->tambah()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manajemen_Detail_Data_Project))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-06 10:59:13 --> Use of undefined constant SITE_ROOT - assumed 'SITE_ROOT' (this will throw an Error in a future version of PHP)
+in APPPATH\Controllers\Manajemen_Detail_Data_Project.php on line 56.
+ 1 APPPATH\Controllers\Manajemen_Detail_Data_Project.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefined constant SITE_ROOT - assumed \'SITE_ROOT\' (this will throw an Error in a future version of PHP)', 'APPPATH\\Controllers\\Manajemen_Detail_Data_Project.php', 56, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Manajemen_Detail_Data_Project->tambah()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manajemen_Detail_Data_Project))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-06 11:00:17 --> Undefined variable: query
+in APPPATH\Controllers\Manajemen_Detail_Data_Project.php on line 58.
+ 1 APPPATH\Controllers\Manajemen_Detail_Data_Project.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: query', 'APPPATH\\Controllers\\Manajemen_Detail_Data_Project.php', 58, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Manajemen_Detail_Data_Project->tambah()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manajemen_Detail_Data_Project))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-06 11:03:08 --> move_uploaded_file(C:\xampp\htdocs\drive\public\file\file-2-12-2022-07-06 11:03:08-verdi sasmeka 5.png): failed to open stream: No such file or directory
+in APPPATH\Controllers\Manajemen_Detail_Data_Project.php on line 56.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'move_uploaded_file(C:\\xampp\\htdocs\\drive\\public\\file\\file-2-12-2022-07-06 11:03:08-verdi sasmeka 5.png): failed to open stream: No such file or directory', 'APPPATH\\Controllers\\Manajemen_Detail_Data_Project.php', 56, [...])
+ 2 APPPATH\Controllers\Manajemen_Detail_Data_Project.php(56): move_uploaded_file('C:\\xampp\\tmp\\php7318.tmp', 'FCPATH\\file\\file-2-12-2022-07-06 11:03:08-verdi sasmeka 5.png')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Manajemen_Detail_Data_Project->tambah()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manajemen_Detail_Data_Project))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-06 11:04:45 --> move_uploaded_file(C:\xampp\htdocs\drive\public\fileile-2-12-2022-07-06 11:04:45-verdi sasmeka 5.png): failed to open stream: No such file or directory
+in APPPATH\Controllers\Manajemen_Detail_Data_Project.php on line 56.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'move_uploaded_file(C:\\xampp\\htdocs\\drive\\public\\fileile-2-12-2022-07-06 11:04:45-verdi sasmeka 5.png): failed to open stream: No such file or directory', 'APPPATH\\Controllers\\Manajemen_Detail_Data_Project.php', 56, [...])
+ 2 APPPATH\Controllers\Manajemen_Detail_Data_Project.php(56): move_uploaded_file('C:\\xampp\\tmp\\phpEC1D.tmp', 'FCPATH\\fileile-2-12-2022-07-06 11:04:45-verdi sasmeka 5.png')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Manajemen_Detail_Data_Project->tambah()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manajemen_Detail_Data_Project))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-06 11:06:39 --> move_uploaded_file(C:\xampp\htdocs\drive\public\file\file-2-12-2022-07-06 11:06:39verdi sasmeka 5.png): failed to open stream: No such file or directory
+in APPPATH\Controllers\Manajemen_Detail_Data_Project.php on line 57.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'move_uploaded_file(C:\\xampp\\htdocs\\drive\\public\\file\\file-2-12-2022-07-06 11:06:39verdi sasmeka 5.png): failed to open stream: No such file or directory', 'APPPATH\\Controllers\\Manajemen_Detail_Data_Project.php', 57, [...])
+ 2 APPPATH\Controllers\Manajemen_Detail_Data_Project.php(57): move_uploaded_file('C:\\xampp\\tmp\\phpAD85.tmp', 'FCPATH\\file\\file-2-12-2022-07-06 11:06:39verdi sasmeka 5.png')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Manajemen_Detail_Data_Project->tambah()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manajemen_Detail_Data_Project))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-06 11:11:32 --> Undefined variable: tambah
+in APPPATH\Controllers\Manajemen_Detail_Data_Project.php on line 58.
+ 1 APPPATH\Controllers\Manajemen_Detail_Data_Project.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: tambah', 'APPPATH\\Controllers\\Manajemen_Detail_Data_Project.php', 58, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Manajemen_Detail_Data_Project->tambah()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manajemen_Detail_Data_Project))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-06 11:11:51 --> rename(C:\xampp\htdocs\drive\public\file\file-verdi sasmeka 5.png,C:\xampp\htdocs\drive\public\file\file-2-Laporan Akhir-12-2022-07-06 11:11:51): The filename, directory name, or volume label syntax is incorrect. (code: 123)
+in APPPATH\Controllers\Manajemen_Detail_Data_Project.php on line 59.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'rename(C:\\xampp\\htdocs\\drive\\public\\file\\file-verdi sasmeka 5.png,C:\\xampp\\htdocs\\drive\\public\\file\\file-2-Laporan Akhir-12-2022-07-06 11:11:51): The filename, directory name, or volume label syntax is incorrect. (code: 123)', 'APPPATH\\Controllers\\Manajemen_Detail_Data_Project.php', 59, [...])
+ 2 APPPATH\Controllers\Manajemen_Detail_Data_Project.php(59): rename('FCPATH\\file\\file-verdi sasmeka 5.png', 'FCPATH\\file\\file-2-Laporan Akhir-12-2022-07-06 11:11:51')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Manajemen_Detail_Data_Project->tambah()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manajemen_Detail_Data_Project))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-06 11:12:45 --> rename(C:\xampp\htdocs\drive\public\file\file-.verdi sasmeka 5.png,C:\xampp\htdocs\drive\public\file\file-.2-Laporan Akhir-12-2022-07-06 11:12:45): The system cannot find the file specified. (code: 2)
+in APPPATH\Controllers\Manajemen_Detail_Data_Project.php on line 59.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'rename(C:\\xampp\\htdocs\\drive\\public\\file\\file-.verdi sasmeka 5.png,C:\\xampp\\htdocs\\drive\\public\\file\\file-.2-Laporan Akhir-12-2022-07-06 11:12:45): The system cannot find the file specified. (code: 2)', 'APPPATH\\Controllers\\Manajemen_Detail_Data_Project.php', 59, [...])
+ 2 APPPATH\Controllers\Manajemen_Detail_Data_Project.php(59): rename('FCPATH\\file\\file-.verdi sasmeka 5.png', 'FCPATH\\file\\file-.2-Laporan Akhir-12-2022-07-06 11:12:45')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Manajemen_Detail_Data_Project->tambah()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manajemen_Detail_Data_Project))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-06 11:13:05 --> rename(C:\xampp\htdocs\drive\public\file\file-verdi sasmeka 5.png,C:\xampp\htdocs\drive\public\file\file-2-Laporan Akhir-12-2022-07-06 11:13:05): The filename, directory name, or volume label syntax is incorrect. (code: 123)
+in APPPATH\Controllers\Manajemen_Detail_Data_Project.php on line 59.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'rename(C:\\xampp\\htdocs\\drive\\public\\file\\file-verdi sasmeka 5.png,C:\\xampp\\htdocs\\drive\\public\\file\\file-2-Laporan Akhir-12-2022-07-06 11:13:05): The filename, directory name, or volume label syntax is incorrect. (code: 123)', 'APPPATH\\Controllers\\Manajemen_Detail_Data_Project.php', 59, [...])
+ 2 APPPATH\Controllers\Manajemen_Detail_Data_Project.php(59): rename('FCPATH\\file\\file-verdi sasmeka 5.png', 'FCPATH\\file\\file-2-Laporan Akhir-12-2022-07-06 11:13:05')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Manajemen_Detail_Data_Project->tambah()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manajemen_Detail_Data_Project))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-06 11:13:52 --> rename(C:\xampp\htdocs\drive\public\file\file-verdi sasmeka 5.png,C:\xampp\htdocs\drive\public\file\file-2-Laporan Akhir-12-2022-07-06 11:13:52.p711): The filename, directory name, or volume label syntax is incorrect. (code: 123)
+in APPPATH\Controllers\Manajemen_Detail_Data_Project.php on line 59.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'rename(C:\\xampp\\htdocs\\drive\\public\\file\\file-verdi sasmeka 5.png,C:\\xampp\\htdocs\\drive\\public\\file\\file-2-Laporan Akhir-12-2022-07-06 11:13:52.p711): The filename, directory name, or volume label syntax is incorrect. (code: 123)', 'APPPATH\\Controllers\\Manajemen_Detail_Data_Project.php', 59, [...])
+ 2 APPPATH\Controllers\Manajemen_Detail_Data_Project.php(59): rename('FCPATH\\file\\file-verdi sasmeka 5.png', 'FCPATH\\file\\file-2-Laporan Akhir-12-2022-07-06 11:13:52.p711')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Manajemen_Detail_Data_Project->tambah()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manajemen_Detail_Data_Project))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-06 11:14:17 --> rename(C:\xampp\htdocs\drive\public\file\file-verdi sasmeka 5.png,C:\xampp\htdocs\drive\public\file\file-2-Laporan Akhir-12-2022-07-06 11:14:17.p711): The filename, directory name, or volume label syntax is incorrect. (code: 123)
+in APPPATH\Controllers\Manajemen_Detail_Data_Project.php on line 59.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'rename(C:\\xampp\\htdocs\\drive\\public\\file\\file-verdi sasmeka 5.png,C:\\xampp\\htdocs\\drive\\public\\file\\file-2-Laporan Akhir-12-2022-07-06 11:14:17.p711): The filename, directory name, or volume label syntax is incorrect. (code: 123)', 'APPPATH\\Controllers\\Manajemen_Detail_Data_Project.php', 59, [...])
+ 2 APPPATH\Controllers\Manajemen_Detail_Data_Project.php(59): rename('FCPATH\\file\\file-verdi sasmeka 5.png', 'FCPATH\\file\\file-2-Laporan Akhir-12-2022-07-06 11:14:17.p711')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Manajemen_Detail_Data_Project->tambah()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manajemen_Detail_Data_Project))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-06 11:17:50 --> move_uploaded_file(C:\xampp\htdocs\drive\public\file\file-2_Laporan Akhir_12_2022-07-06 11:17:50verdi sasmeka 5.png): failed to open stream: No such file or directory
+in APPPATH\Controllers\Manajemen_Detail_Data_Project.php on line 57.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'move_uploaded_file(C:\\xampp\\htdocs\\drive\\public\\file\\file-2_Laporan Akhir_12_2022-07-06 11:17:50verdi sasmeka 5.png): failed to open stream: No such file or directory', 'APPPATH\\Controllers\\Manajemen_Detail_Data_Project.php', 57, [...])
+ 2 APPPATH\Controllers\Manajemen_Detail_Data_Project.php(57): move_uploaded_file('C:\\xampp\\tmp\\phpE67F.tmp', 'FCPATH\\file\\file-2_Laporan Akhir_12_2022-07-06 11:17:50verdi sasmeka 5.png')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Manajemen_Detail_Data_Project->tambah()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manajemen_Detail_Data_Project))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-06 11:18:30 --> move_uploaded_file(C:\xampp\htdocs\drive\public\file\file-2122022-07-06 11:18:30verdi sasmeka 5.png): failed to open stream: No such file or directory
+in APPPATH\Controllers\Manajemen_Detail_Data_Project.php on line 57.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'move_uploaded_file(C:\\xampp\\htdocs\\drive\\public\\file\\file-2122022-07-06 11:18:30verdi sasmeka 5.png): failed to open stream: No such file or directory', 'APPPATH\\Controllers\\Manajemen_Detail_Data_Project.php', 57, [...])
+ 2 APPPATH\Controllers\Manajemen_Detail_Data_Project.php(57): move_uploaded_file('C:\\xampp\\tmp\\php8466.tmp', 'FCPATH\\file\\file-2122022-07-06 11:18:30verdi sasmeka 5.png')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Manajemen_Detail_Data_Project->tambah()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manajemen_Detail_Data_Project))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-06 11:18:58 --> move_uploaded_file(C:\xampp\htdocs\drive\public\file\file-2122022-07-0611:18:58verdi sasmeka 5.png): failed to open stream: No such file or directory
+in APPPATH\Controllers\Manajemen_Detail_Data_Project.php on line 57.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'move_uploaded_file(C:\\xampp\\htdocs\\drive\\public\\file\\file-2122022-07-0611:18:58verdi sasmeka 5.png): failed to open stream: No such file or directory', 'APPPATH\\Controllers\\Manajemen_Detail_Data_Project.php', 57, [...])
+ 2 APPPATH\Controllers\Manajemen_Detail_Data_Project.php(57): move_uploaded_file('C:\\xampp\\tmp\\phpF273.tmp', 'FCPATH\\file\\file-2122022-07-0611:18:58verdi sasmeka 5.png')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Manajemen_Detail_Data_Project->tambah()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manajemen_Detail_Data_Project))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-06 11:19:45 --> move_uploaded_file(C:\xampp\htdocs\drive\public\file\file-2022-07-0611:19:45verdi sasmeka 5.png): failed to open stream: No such file or directory
+in APPPATH\Controllers\Manajemen_Detail_Data_Project.php on line 57.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'move_uploaded_file(C:\\xampp\\htdocs\\drive\\public\\file\\file-2022-07-0611:19:45verdi sasmeka 5.png): failed to open stream: No such file or directory', 'APPPATH\\Controllers\\Manajemen_Detail_Data_Project.php', 57, [...])
+ 2 APPPATH\Controllers\Manajemen_Detail_Data_Project.php(57): move_uploaded_file('C:\\xampp\\tmp\\phpA866.tmp', 'FCPATH\\file\\file-2022-07-0611:19:45verdi sasmeka 5.png')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Manajemen_Detail_Data_Project->tambah()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manajemen_Detail_Data_Project))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-06 11:23:04 --> move_uploaded_file(C:\xampp\htdocs\drive\public\file\file-2-Laporan Akhir-12-2022-07-06 11:23:04verdi sasmeka 5.png): failed to open stream: No such file or directory
+in APPPATH\Controllers\Manajemen_Detail_Data_Project.php on line 57.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'move_uploaded_file(C:\\xampp\\htdocs\\drive\\public\\file\\file-2-Laporan Akhir-12-2022-07-06 11:23:04verdi sasmeka 5.png): failed to open stream: No such file or directory', 'APPPATH\\Controllers\\Manajemen_Detail_Data_Project.php', 57, [...])
+ 2 APPPATH\Controllers\Manajemen_Detail_Data_Project.php(57): move_uploaded_file('C:\\xampp\\tmp\\phpB48F.tmp', 'FCPATH\\file\\file-2-Laporan Akhir-12-2022-07-06 11:23:04verdi sasmeka 5.png')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Manajemen_Detail_Data_Project->tambah()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manajemen_Detail_Data_Project))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-06 11:45:50 --> Undefined offset: 0
+in APPPATH\Controllers\Manajemen_Detail_Data_Project.php on line 85.
+ 1 APPPATH\Controllers\Manajemen_Detail_Data_Project.php(85): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 0', 'APPPATH\\Controllers\\Manajemen_Detail_Data_Project.php', 85, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Manajemen_Detail_Data_Project->hapus()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manajemen_Detail_Data_Project))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-07-06 12:05:43 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'guysdasd, judul='Laporan Akhir',id_pembuat=12 where id=31' at line 1
+CRITICAL - 2022-07-06 12:05:43 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'guysdasd, judul='Laporan Akhir',id_pembuat=12 where id=31' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE detail_data_project SET pesan=haloo guysdasd, judul=\'Laporan Akhir\',id_pembuat=12 where id=31', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE detail_data_project SET pesan=haloo guysdasd, judul=\'Laporan Akhir\',id_pembuat=12 where id=31')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE detail_data_project SET pesan=haloo guysdasd, judul=\'Laporan Akhir\',id_pembuat=12 where id=31')
+ 4 APPPATH\Controllers\Manajemen_Detail_Data_Project.php(99): CodeIgniter\Database\BaseConnection->query('UPDATE detail_data_project SET pesan=haloo guysdasd, judul=\'Laporan Akhir\',id_pembuat=12 where id=31')
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Manajemen_Detail_Data_Project->ubah()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manajemen_Detail_Data_Project))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-06 12:06:00 --> unlink(C:\xampp\htdocs\drive\public\file\file-2-12-Laporan Akhir-2022-07-06 12.00.29.docx): No such file or directory
+in APPPATH\Controllers\Manajemen_Detail_Data_Project.php on line 79.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\xampp\\htdocs\\drive\\public\\file\\file-2-12-Laporan Akhir-2022-07-06 12.00.29.docx): No such file or directory', 'APPPATH\\Controllers\\Manajemen_Detail_Data_Project.php', 79, [...])
+ 2 APPPATH\Controllers\Manajemen_Detail_Data_Project.php(79): unlink('FCPATH\\file\\file-2-12-Laporan Akhir-2022-07-06 12.00.29.docx')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Manajemen_Detail_Data_Project->ubah()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manajemen_Detail_Data_Project))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-06 12:21:30 --> Undefined property: stdClass::$namafile
+in APPPATH\Controllers\Manajemen_Detail_Data_Project.php on line 82.
+ 1 APPPATH\Controllers\Manajemen_Detail_Data_Project.php(82): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$namafile', 'APPPATH\\Controllers\\Manajemen_Detail_Data_Project.php', 82, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Manajemen_Detail_Data_Project->download()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manajemen_Detail_Data_Project))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-06 12:21:43 --> File not found: file/2-12-Laporan Akhir-2022-07-06 12.07.13.docx
+in SYSTEMPATH\Files\File.php on line 46.
+ 1 SYSTEMPATH\Files\File.php(46): CodeIgniter\Files\Exceptions\FileNotFoundException::forFileNotFound('file/2-12-Laporan Akhir-2022-07-06 12.07.13.docx')
+ 2 SYSTEMPATH\HTTP\DownloadResponse.php(97): CodeIgniter\Files\File->__construct('file/2-12-Laporan Akhir-2022-07-06 12.07.13.docx', true)
+ 3 SYSTEMPATH\HTTP\ResponseTrait.php(779): CodeIgniter\HTTP\DownloadResponse->setFilePath('file/2-12-Laporan Akhir-2022-07-06 12.07.13.docx')
+ 4 APPPATH\Controllers\Manajemen_Detail_Data_Project.php(82): CodeIgniter\HTTP\Response->download('2-12-Laporan Akhir-2022-07-06 12.07.13.docx', null)
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Manajemen_Detail_Data_Project->download()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manajemen_Detail_Data_Project))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-07-06 20:36:45 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+CRITICAL - 2022-07-06 20:36:45 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT a.`judul`,a.`id`,a.`nama_file`,a.`pesan`,c.`fullname`,b.`nama`,b.`tahun`,a.`create_at` FROM detail_data_project a LEFT JOIN data_project b ON a.`id_project`=b.`id` LEFT JOIN users c ON a.`id_pembuat`=c.`id` WHERE a.`id_project`=', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT a.`judul`,a.`id`,a.`nama_file`,a.`pesan`,c.`fullname`,b.`nama`,b.`tahun`,a.`create_at` FROM detail_data_project a LEFT JOIN data_project b ON a.`id_project`=b.`id` LEFT JOIN users c ON a.`id_pembuat`=c.`id` WHERE a.`id_project`=')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT a.`judul`,a.`id`,a.`nama_file`,a.`pesan`,c.`fullname`,b.`nama`,b.`tahun`,a.`create_at` FROM detail_data_project a LEFT JOIN data_project b ON a.`id_project`=b.`id` LEFT JOIN users c ON a.`id_pembuat`=c.`id` WHERE a.`id_project`=')
+ 4 APPPATH\Controllers\Manajemen_Detail_Data_Project.php(19): CodeIgniter\Database\BaseConnection->query('SELECT a.`judul`,a.`id`,a.`nama_file`,a.`pesan`,c.`fullname`,b.`nama`,b.`tahun`,a.`create_at` FROM detail_data_project a LEFT JOIN data_project b ON a.`id_project`=b.`id` LEFT JOIN users c ON a.`id_pembuat`=c.`id` WHERE a.`id_project`=')
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Manajemen_Detail_Data_Project->index()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manajemen_Detail_Data_Project))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
