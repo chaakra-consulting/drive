@@ -14,7 +14,8 @@ class Manajemen_Data_Project extends BaseController
     {
       // return view('auth/login');
       $data = [
-        'data' => $this->db->query("SELECT a.`tahun`,a.`nama`,a.`create_at`,a.`id`,b.`fullname` FROM data_project a LEFT JOIN users b ON a.`id_pembuat`=b.`id`")->getResult()
+        'data' => $this->db->query("SELECT a.`tahun`,a.`nama`,a.`create_at`,a.`id`,b.`fullname` FROM data_project a LEFT JOIN users b ON a.`id_pembuat`=b.`id`")->getResult(),
+        'menu' => 'manajemen_data_Project'
       ];
       return view('manajemen_data_project',$data);
     }

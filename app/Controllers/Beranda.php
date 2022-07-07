@@ -25,7 +25,6 @@ foreach ($files as $file) {
 }
     }
     public function coba2(){
-      return view('auth/reset');
     }
     public function ubahprofil()
     {

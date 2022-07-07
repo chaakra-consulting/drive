@@ -16,7 +16,11 @@ use CodeIgniter\Images\Image;
 					<div class="breadcrumb-header justify-content-between">
 						<div class="my-auto">
 							<div class="d-flex">
+							<?php if($menu!='proyek_saya'){ ;?>
 								<h4 class="content-title mb-0 my-auto">Manajemen Data Perusahaan</h4><span class="text-muted mt-1 tx-13 ms-2 mb-0">/ Daftar Proyek</span>
+							<?php }else{ ;?>
+								<h4 class="content-title mb-0 my-auto">Data Saya</h4><span class="text-muted mt-1 tx-13 ms-2 mb-0">/ Daftar Proyek</span>
+								<?php }?>
 							</div>
 						</div>
 					</div>
@@ -28,7 +32,11 @@ use CodeIgniter\Images\Image;
 						<div class="card">
 							<div class="card-header pb-0">
 								<div class="d-flex justify-content-between">
+								<?php if($menu!='proyek_saya'){ ;?>
 									<h4 class="card-title mg-b-0">Daftar Data Perusahaan</h4>
+									<?php }else{ ;?>
+										<h4 class="card-title mg-b-0">Daftar Data Proyek</h4>
+										<?php }?>
 									<i class="mdi mdi-dots-horizontal text-gray"></i>
 								</div>
 							</div>
@@ -142,13 +150,18 @@ use CodeIgniter\Images\Image;
 													<td>
 														<div class='row'>
 															<div class="col col-md-4">
+															<?php if($menu!='proyek_saya'){ ;?>
 																<form action="<?php base_url()?>/detail_data_project/" method="POST">
+															<?php }else{ ?>
+																<form action="<?php base_url()?>/detail_project_saya/" method="POST">
+																<?php }?>
 																	<input type="hidden" name='id_proyek' value="<?= $a->id ?>">
 																	<button class="btn btn-sm btn-primary">
 																		<i class="las la-search" type='submit'></i>
 																	</button>
 																</form>
 															</div>
+															<?php if($menu!='proyek_saya'){ ;?>
 															<div class="col col-md-4">
 																<a href="#" class="modal-effect btn btn-sm btn-info btn-b" data-bs-effect="effect-super-scaled" data-bs-toggle="modal"  data-bs-target="#modalupdate<?= $no;?>">
 																	<i class="las la-pen"></i>
@@ -159,6 +172,7 @@ use CodeIgniter\Images\Image;
 																	<i class="las la-trash"></i>
 																</a>
 															</div>
+															<?php }?>
 														</div>
 													</td>
 												</tr>

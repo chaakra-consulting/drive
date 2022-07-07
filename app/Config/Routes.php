@@ -39,6 +39,12 @@ $routes->get('/', 'Beranda::index');
 $routes->add('/ubahprofil', 'Beranda::ubahprofil');
 $routes->add('/ubahsosmed', 'Beranda::ubahsosmed');
 
+$routes->add('/project_saya', 'Project_Saya::index');
+$routes->add('/detail_project_saya', 'Detail_Project_Saya::index');
+$routes->add('/add_file_project_saya', 'Detail_Project_Saya::tambah');
+$routes->add('/update_file_project_saya', 'Detail_Project_Saya::ubah');
+$routes->add('/delete_file_project_saya', 'Detail_Project_Saya::hapus');
+
 $routes->add('/manajemenusers', 'Manajemen_Users::index', ['filter' => 'role:admin,super admin']);
 $routes->add('/nonaktifusers', 'Manajemen_Users::nonaktifusers', ['filter' => 'role:admin,super admin']);
 $routes->add('/reaktifusers', 'Manajemen_Users::reaktifusers', ['filter' => 'role:admin,super admin']);
