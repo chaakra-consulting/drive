@@ -42,6 +42,10 @@ class Manajemen_Data_Project extends BaseController
     {
       $id = user()->id; 
       $id_proyek = $this->request->getPost("id_proyek");
+      $a= $this->db->query("SELECT * FROM detail_data_project where id_project=$id_proyek")->getResult();
+      foreach($a as $b){
+        unlink(FCPATH.'file\file-'.$b->nama_file);
+      }
       $this->db->query("DELETE FROM detail_data_project where id_project=$id_proyek");
       $this->db->query("DELETE FROM permisions_project where id_project=$id_proyek");
       $this->db->query("DELETE FROM data_project where id=$id_proyek");

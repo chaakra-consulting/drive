@@ -1,0 +1,34 @@
+CRITICAL - 2022-07-07 01:46:20 --> Undefined property: mysqli::$nama_file
+in APPPATH\Controllers\Manajemen_Data_Project.php on line 47.
+ 1 APPPATH\Controllers\Manajemen_Data_Project.php(47): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: mysqli::$nama_file', 'APPPATH\\Controllers\\Manajemen_Data_Project.php', 47, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Manajemen_Data_Project->hapus()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manajemen_Data_Project))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-07 01:47:55 --> Undefined property: mysqli::$nama_file
+in APPPATH\Controllers\Manajemen_Data_Project.php on line 47.
+ 1 APPPATH\Controllers\Manajemen_Data_Project.php(47): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: mysqli::$nama_file', 'APPPATH\\Controllers\\Manajemen_Data_Project.php', 47, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Manajemen_Data_Project->hapus()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manajemen_Data_Project))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-07 01:50:22 --> count(): Parameter must be an array or an object that implements Countable
+in APPPATH\Controllers\Manajemen_Data_Project.php on line 49.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'count(): Parameter must be an array or an object that implements Countable', 'APPPATH\\Controllers\\Manajemen_Data_Project.php', 49, [...])
+ 2 APPPATH\Controllers\Manajemen_Data_Project.php(49): count(Object(CodeIgniter\Database\MySQLi\Result))
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Manajemen_Data_Project->hapus()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manajemen_Data_Project))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-07 01:51:10 --> count(): Parameter must be an array or an object that implements Countable
+in APPPATH\Controllers\Manajemen_Data_Project.php on line 49.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'count(): Parameter must be an array or an object that implements Countable', 'APPPATH\\Controllers\\Manajemen_Data_Project.php', 49, [...])
+ 2 APPPATH\Controllers\Manajemen_Data_Project.php(49): count(Object(CodeIgniter\Database\MySQLi\Result))
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Manajemen_Data_Project->hapus()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manajemen_Data_Project))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
