@@ -33,6 +33,11 @@ use CodeIgniter\Images\Image;
 								</div>
 							</div>
 							<div class="card-body">
+							<?php if(session()->getFlashdata('pesan')) { ?>
+        <div class="alert alert-primary" role="alert"><?= session()->getFlashdata('pesan');?></div>
+      <?php }elseif(session()->getFlashdata('pesan-danger')){ ?>
+        <div class="alert alert-danger" role="alert"><?= session()->getFlashdata('pesan-danger');?></div>
+      <?php } ?>
 								<div class="table-responsive">
 									<table class="table text-md-nowrap" id="example1">
 										<thead>

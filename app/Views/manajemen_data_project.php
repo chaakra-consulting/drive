@@ -41,36 +41,43 @@ use CodeIgniter\Images\Image;
 								</div>
 							</div>
 							<div class="card-body">
-							<div class="modal fade" id="modaladd">
-								<div class="modal-dialog modal-lg" role="document">
-									<div class="modal-content modal-content-demo">
-										<div class="modal-header">
-											<h6 class="modal-title">Tambah Proyek</h6><button aria-label="Close" class="close"
-												data-bs-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-										</div>											
-										<div class="modal-body">
-										<form action="<?php base_url()?>/add_project" method="POST">
-											<div class="form-group">
-												<label for="tahun_proyek">Tahun Proyek</label>
-												<input type="text" name='tahun_proyek' class="form-control" id="tahun_proyek" placeholder="Tahun Proyek">
+							<?php if(session()->getFlashdata('pesan')) { ?>
+								<div class="alert alert-primary" role="alert"><?= session()->getFlashdata('pesan');?></div>
+							<?php }elseif(session()->getFlashdata('pesan-danger')){ ?>
+								<div class="alert alert-danger" role="alert"><?= session()->getFlashdata('pesan-danger');?></div>
+							<?php } ?>
+								<div class="modal fade" id="modaladd">
+									<div class="modal-dialog modal-lg" role="document">
+										<div class="modal-content modal-content-demo">
+											<div class="modal-header">
+												<h6 class="modal-title">Tambah Proyek</h6><button aria-label="Close" class="close"
+													data-bs-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
+											</div>											
+											<div class="modal-body">
+											<form action="<?php base_url()?>/add_project" method="POST">
+												<div class="form-group">
+													<label for="tahun_proyek">Tahun Proyek</label>
+													<input type="text" name='tahun_proyek' class="form-control" id="tahun_proyek" placeholder="Tahun Proyek">
+												</div>
+												<div class="form-group">
+													<label for="nama_proyek">Nama Proyek</label>
+													<textarea class='form-control' name="nama_proyek"  placeholder="Nama Proyek"></textarea>
+												</div>
 											</div>
-											<div class="form-group">
-												<label for="nama_proyek">Nama Proyek</label>
-												<textarea class='form-control' name="nama_proyek"  placeholder="Nama Proyek"></textarea>
+											<div class="modal-footer">
+												<button class="btn ripple btn-primary" type="submit">Tambah</button>
+												<button class="btn ripple btn-secondary" data-bs-dismiss="modal" type="button">Batal</button>
 											</div>
+											</form>
 										</div>
-										<div class="modal-footer">
-											<button class="btn ripple btn-primary" type="submit">Tambah</button>
-											<button class="btn ripple btn-secondary" data-bs-dismiss="modal" type="button">Batal</button>
-										</div>
-										</form>
 									</div>
 								</div>
-							</div>
-							<div class="row row-xs wd-sm-40p">
-								<div class="col-sm-6 col-md-3 mg-t-10 mg-md-t-0"><button class="btn btn-secondary btn-rounded btn-block" data-bs-effect="effect-super-scaled" data-bs-toggle="modal"  data-bs-target="#modaladd">Tambah</button></div>
-							</div>
-							<br>
+								<?php if($menu!='proyek_saya'){?>
+								<div class="row row-xs wd-sm-40p">
+									<div class="col-sm-6 col-md-3 mg-t-10 mg-md-t-0"><button class="btn btn-secondary btn-rounded btn-block" data-bs-effect="effect-super-scaled" data-bs-toggle="modal"  data-bs-target="#modaladd">Tambah</button></div>
+								</div>
+								<br>
+								<?php }?>
 								<div class="table-responsive">
 									<table class="table text-md-nowrap" id="example1">
 										<thead>

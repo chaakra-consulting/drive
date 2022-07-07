@@ -14,17 +14,13 @@ class Beranda extends BaseController
     }
     public function index()
     {
-      // return view('auth/login');
-      return view('beranda');
-    }
-    public function coba(){
-      $files    =glob(FCPATH.'\foto\foto_verdi sasmeka2.png');
-foreach ($files as $file) {
-    if (is_file($file))
-    unlink($file); // hapus file
-}
-    }
-    public function coba2(){
+      $data = [
+        'jumlah_proyek' => $this->db->query("SELECT COUNT(id) AS jumlah FROM permisions_project where id_user=".user()->id)->getResult(),
+        'jumlah_data_saya' => $this->db->query("SELECT COUNT(id) AS jumlah FROM detail_data_project WHERE id_pembuat=".user()->id)->getResult(),
+        'jumlah_semua_data' => $this->db->query("SELECT COUNT(id) AS jumlah FROM detail_data_project")->getResult(),
+        'menu' => 'manajemen_data_Project'
+      ];
+      return view('beranda',$data);
     }
     public function ubahprofil()
     {

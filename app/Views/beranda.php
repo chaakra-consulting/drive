@@ -95,7 +95,7 @@ use CodeIgniter\Images\Image;
               </div>
               <div class="ms-auto">
                 <h5 class="tx-13">Data Saya</h5>
-                <h2 class="mb-0 tx-22 mb-1 mt-1">1,587</h2>
+                <h2 class="mb-0 tx-22 mb-1 mt-1"><?= $jumlah_data_saya[0]->jumlah; ?></h2>
               </div>
             </div>
           </div>
@@ -109,8 +109,8 @@ use CodeIgniter\Images\Image;
                 <i class="icon-folder text-danger"></i>
               </div>
               <div class="ms-auto">
-                <h5 class="tx-13">Data Perusahaan</h5>
-                <h2 class="mb-0 tx-22 mb-1 mt-1">46,782</h2>
+                <h5 class="tx-13">Data Proyek Aktif Saya</h5>
+                <h2 class="mb-0 tx-22 mb-1 mt-1"><?= $jumlah_proyek[0]->jumlah; ?></h2>
               </div>
             </div>
           </div>
@@ -121,11 +121,11 @@ use CodeIgniter\Images\Image;
           <div class="card-body">
             <div class="counter-status d-flex md-mb-0">
               <div class="counter-icon bg-success-transparent">
-              <i class="icon-folder-open text-success"></i>
+              <i class="icon-folder text-success"></i>
               </div>
               <div class="ms-auto">
-                <h5 class="tx-13">Total Penyimpanan Data Saya</h5>
-                <h2 class="mb-0 tx-22 mb-1 mt-1">1,890</h2>
+                <h5 class="tx-13">Jumlah Data Perusahaan</h5>
+                <h2 class="mb-0 tx-22 mb-1 mt-1"><?= $jumlah_semua_data[0]->jumlah; ?></h2>
               </div>
             </div>
           </div>
@@ -136,10 +136,10 @@ use CodeIgniter\Images\Image;
     
     <div class="card-body">
       <?php if(session()->getFlashdata('pesan')) { ?>
-    <div class="alert alert-primary" role="alert"><?= session()->getFlashdata('pesan');?></div>
-<?php }elseif(session()->getFlashdata('pesan-danger')){ ?>
-  <div class="alert alert-danger" role="alert"><?= session()->getFlashdata('pesan-danger');?></div>
-  <?php } ?>
+        <div class="alert alert-primary" role="alert"><?= session()->getFlashdata('pesan');?></div>
+      <?php }elseif(session()->getFlashdata('pesan-danger')){ ?>
+        <div class="alert alert-danger" role="alert"><?= session()->getFlashdata('pesan-danger');?></div>
+      <?php } ?>
     <div class="tabs-menu ">
 									<!-- Tabs -->
 									<ul class="nav nav-tabs profile navtab-custom panel-tabs">

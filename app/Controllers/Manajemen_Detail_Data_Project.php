@@ -77,6 +77,7 @@ class Manajemen_Detail_Data_Project extends BaseController
       $data = $this->db->query("SELECT * FROM detail_data_project where id=$id_file")->getResult();
       unlink(FCPATH.'file\file-'.$data[0]->nama_file);
       $this->db->query("DELETE FROM detail_data_project where id=$id_file");
+      session()->setFlashdata("pesan-danger", "File proyek berhasil dihapus");
       return redirect()->to('/detail_data_project');
     }
     public function download(){

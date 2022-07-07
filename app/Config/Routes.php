@@ -49,6 +49,10 @@ $routes->add('/manajemenusers', 'Manajemen_Users::index', ['filter' => 'role:adm
 $routes->add('/nonaktifusers', 'Manajemen_Users::nonaktifusers', ['filter' => 'role:admin,super admin']);
 $routes->add('/reaktifusers', 'Manajemen_Users::reaktifusers', ['filter' => 'role:admin,super admin']);
 $routes->add('/detailsuser', 'Manajemen_Users::detailsuser', ['filter' => 'role:admin,super admin']);
+$routes->add('/add_permision_project', 'Manajemen_Users::add', ['filter' => 'role:admin,super admin']);
+$routes->add('/delete_permision_project', 'Manajemen_Users::delete', ['filter' => 'role:admin,super admin']);
+$routes->add('/delete_all_permision_project', 'Manajemen_Users::deleteall', ['filter' => 'role:admin,super admin']);
+
 
 $routes->add('/dataperusahaan', 'Manajemen_Data_Project::index', ['filter' => 'role:admin,super admin']);
 $routes->add('/add_project', 'Manajemen_Data_Project::tambah', ['filter' => 'role:admin,super admin']);
@@ -60,9 +64,6 @@ $routes->add('/add_file_project', 'Manajemen_Detail_Data_Project::tambah', ['fil
 $routes->add('/delete_file_project', 'Manajemen_Detail_Data_Project::hapus', ['filter' => 'role:admin,super admin']);
 $routes->add('/update_file_project', 'Manajemen_Detail_Data_Project::ubah', ['filter' => 'role:admin,super admin']);
 $routes->add('/download_file_project', 'Manajemen_Detail_Data_Project::download', ['filter' => 'role:admin,super admin']);
-
-$routes->add('/coba', 'Beranda::coba');
-$routes->add('/coba2', 'Beranda::coba2');
 
 /*
  * --------------------------------------------------------------------
