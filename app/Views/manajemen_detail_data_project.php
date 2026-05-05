@@ -103,8 +103,8 @@ use CodeIgniter\Images\Image;
 													<div class="modal-body">
 														<p>Anda yakin akan mengahapus proyek <b><?= $a->judul ;?> (<?= $a->nama_file ;?>)</b> ?</p>
 													</div>
-													<form action="<?php base_url()?>/delete_file_project_saya" method="POST">
-														<input type="hidden" name='id_file' value="<?= $a->id ?>">
+													<form action="<?php base_url()?>/delete_file_project_saya/<?= $a->id ?>" method="POST">
+														<?= csrf_field() ?>
 														<div class="modal-footer">
 															<button class="btn ripple btn-primary" type="submit">Hapus</button>
 															<button class="btn ripple btn-secondary" data-bs-dismiss="modal" type="button">Batal</button>
@@ -150,7 +150,7 @@ use CodeIgniter\Images\Image;
 													<td>
 														<div class='row'>
 														<div class="col col-md-4">
-																<a href="#" class="btn btn-sm btn-primary"  data-bs-effect="effect-super-scaled" data-bs-toggle="modal"  data-bs-target="#modaldownload<?= $no;?>">
+																<a href="<?php echo base_url(); ?>/file/file-<?= $a->nama_file ?>" class="btn btn-sm btn-primary">
 																	<i class="las la-download"></i>
 																</a>
 															</div>

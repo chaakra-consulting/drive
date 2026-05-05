@@ -70,17 +70,17 @@ class Detail_Project_Saya extends BaseController
       return redirect()->to('/detail_data_project/' . $id);
 
     }
-    public function hapus()
+    public function hapus($id)
     {
-      $id = user()->id; 
-      $id_file = $this->request->getPost("id_file");
+      // $id = user()->id; 
+      $id_file = $id;
       $data = $this->db->query("SELECT * FROM detail_data_project where id=$id_file")->getResult();
       unlink(FCPATH.'file\file-'.$data[0]->nama_file);
       $this->db->query("DELETE FROM detail_data_project where id=$id_file");
       return redirect()->to('/detail_data_project/' . $data[0]->id_project);
     }
-    public function download(){
-      $id_file = $this->request->getPost("id_file");
+    public function download($id){
+      $id_file = $id;
       $data = $this->db->query("SELECT * FROM detail_data_project where id=$id_file")->getResult();
       return $this->response->download(FCPATH.'file\file-' . $data[0]->nama_file, null);
     }

@@ -43,7 +43,7 @@ $routes->add('/project_saya', 'Project_Saya::index');
 $routes->add('/detail_project_saya', 'Detail_Project_Saya::index');
 $routes->add('/add_file_project_saya/(:any)', 'Detail_Project_Saya::tambah/$1');
 $routes->add('/update_file_project_saya', 'Detail_Project_Saya::ubah');
-$routes->add('/delete_file_project_saya', 'Detail_Project_Saya::hapus');
+$routes->add('/delete_file_project_saya/(:any)', 'Detail_Project_Saya::hapus/$1');
 
 $routes->add('/manajemenusers', 'Manajemen_Users::index', ['filter' => 'role:admin,super admin']);
 $routes->add('/nonaktifusers', 'Manajemen_Users::nonaktifusers', ['filter' => 'role:admin,super admin']);
