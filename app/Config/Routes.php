@@ -41,7 +41,7 @@ $routes->add('/ubahsosmed', 'Beranda::ubahsosmed');
 
 $routes->add('/project_saya', 'Project_Saya::index');
 $routes->add('/detail_project_saya', 'Detail_Project_Saya::index');
-$routes->add('/add_file_project_saya', 'Detail_Project_Saya::tambah');
+$routes->add('/add_file_project_saya/(:any)', 'Detail_Project_Saya::tambah/$1');
 $routes->add('/update_file_project_saya', 'Detail_Project_Saya::ubah');
 $routes->add('/delete_file_project_saya', 'Detail_Project_Saya::hapus');
 

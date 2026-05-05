@@ -40,7 +40,7 @@ class Detail_Project_Saya extends BaseController
         }
       return view('manajemen_detail_data_project',$data);
     }
-    public function tambah()
+    public function tambah($id)
     {
       $id_pembuat = user()->id; 
       $id_project = session()->get('id_proyek');
@@ -50,7 +50,7 @@ class Detail_Project_Saya extends BaseController
       $nama_ori = $_FILES['file_project']['name'];
       $x = explode('.', $nama_ori);
 			$ekstensi = strtolower(end($x));
-      $nama = strval($id_project.'-'.$id_pembuat.'-'.$judul.' ('.date("Y-m-d H.i.s").').');
+      $nama = strval($id.'-'.$id_pembuat.'-'.$judul.' ('.date("Y-m-d H.i.s").').');
 			$ukuran	= $_FILES['file_project']['size'];
 			$file_tmp = $_FILES['file_project']['tmp_name'];	
 
@@ -58,7 +58,7 @@ class Detail_Project_Saya extends BaseController
       if($nama_ori!=''){	
             $path = FCPATH.'file\file-';
 				    move_uploaded_file($file_tmp, $path.$nama.$ekstensi);
-					  $query=$this->db->query("INSERT INTO detail_data_project (nama_file,judul,create_at,id_pembuat,pesan,id_project) VALUES ('".$nama.$ekstensi."','$judul',now(),$id_pembuat,'$pesan',$id_project)");
+					  $query=$this->db->query("INSERT INTO detail_data_project (nama_file,judul,create_at,id_pembuat,pesan,id_project) VALUES ('".$nama.$ekstensi."','$judul',now(),$id_pembuat,'$pesan',$id)");
 					    if($query){
 						    session()->setFlashdata("pesan", "Berhasil menambah file");
 					    }else{
@@ -67,7 +67,7 @@ class Detail_Project_Saya extends BaseController
       }else{
         session()->setFlashdata("pesan-danger", "Harus menyertakan file");
       }
-      return redirect()->to('/detail_data_project/' . $id_project);
+      return redirect()->to('/detail_data_project/' . $id);
 
     }
     public function hapus()

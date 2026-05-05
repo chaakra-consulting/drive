@@ -50,7 +50,7 @@ use CodeIgniter\Images\Image;
 												data-bs-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
 										</div>											
 										<div class="modal-body">
-										<form action="<?php base_url()?>/add_file_project_saya" method="POST" enctype="multipart/form-data">
+										<form action="<?php base_url()?>/add_file_project_saya/<?= $data_project[0]->id ?>" method="POST" enctype="multipart/form-data">
 											<div class="form-group">
 												<label for="judul">Judul</label>
 												<input type="text" name="judul" class="form-control" id="judul" placeholder="Judul File">
