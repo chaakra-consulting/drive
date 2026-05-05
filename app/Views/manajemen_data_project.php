@@ -72,12 +72,9 @@ use CodeIgniter\Images\Image;
 										</div>
 									</div>
 								</div>
-								<?php if($menu!='proyek_saya'){?>
 								<div class="row row-xs wd-sm-40p">
 									<div class="col-sm-6 col-md-3 mg-t-10 mg-md-t-0"><button class="btn btn-secondary btn-rounded btn-block" data-bs-effect="effect-super-scaled" data-bs-toggle="modal"  data-bs-target="#modaladd">Tambah</button></div>
 								</div>
-								<br>
-								<?php }?>
 								<div class="table-responsive">
 									<table class="table text-md-nowrap" id="example1">
 										<thead>
