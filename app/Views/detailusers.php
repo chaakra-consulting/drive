@@ -179,6 +179,7 @@ use CodeIgniter\Images\Image;
                           </div>											
                           <div class="modal-body">
                           <form action="<?php base_url()?>/add_permision_project" method="POST">
+                            <?= csrf_field() ?>
                             <div class="form-group">
                               <label for="exampleFormControlSelect1">Proyek</label>
                               <select class="form-control" id="exampleFormControlSelect1" name="id_proyek">
@@ -207,6 +208,7 @@ use CodeIgniter\Images\Image;
                                 <p>Anda yakin akan mengahapus izin semua proyek ?</p>
                               </div>
                               <form action="<?php base_url()?>/delete_all_permision_project" method="POST">
+                                <?= csrf_field() ?>
                                 <input type="hidden" name='id_user' value="<?= user()->id ?>">
                                 <div class="modal-footer">
                                   <button class="btn ripple btn-primary" type="submit">Hapus Semua</button>
@@ -244,6 +246,7 @@ use CodeIgniter\Images\Image;
                                 <p>Anda yakin akan mengahapus Izin proyek <b><?= $a->nama ;?> ?</b></p>
                               </div>
                               <form action="<?php base_url()?>/delete_permision_project" method="POST">
+                                <?= csrf_field() ?>
                                 <input type="hidden" name='id_permision' value="<?= $a->id ?>">
                                 <div class="modal-footer">
                                   <button class="btn ripple btn-primary" type="submit">Hapus</button>

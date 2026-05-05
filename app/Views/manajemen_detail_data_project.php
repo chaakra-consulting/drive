@@ -125,6 +125,7 @@ use CodeIgniter\Images\Image;
 														<p><b>PESAN :</b> <?= $a->pesan; ?></p>
 													</div>
 													<form action="<?php base_url() ?>/download_file_project" method="POST">
+														<?= csrf_field() ?>
 														<input type="hidden" name='id_file' value="<?= $a->id ?>">
 														<div class="modal-footer">
 															<button class="btn ripple btn-primary" data-bs-dismiss="modal" type="submit">DOWNLOAD</button>

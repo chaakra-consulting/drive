@@ -56,9 +56,8 @@ class Manajemen_Users extends BaseController
       }
       return redirect()->to('/detailsuser');
     }
-    public function detailsuser()
+    public function detailsuser($id)
     {
-    $id = $this->request->getPost("id-detail");
     if($id==""){
       $id = session()->get('id_detail_user');
     }else{

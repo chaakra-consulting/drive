@@ -81,15 +81,14 @@ use CodeIgniter\Images\Image;
 													<td>
 														<div class='row'>
 															<div class="col col-md-4">
-																<form action="/detailsuser" method="post">
-																	<input type="hidden" value="<?= $a->id; ?>" name="id-detail" class="form-control">
-																	<button class="btn btn-sm btn-primary" type="submit">
+																<a href="<?= base_url() ?>/detailsuser/<?= $a->id ?>" class="btn btn-sm btn-primary" type="submit">
 																		<i class="las la-search"></i>
-																	</button>
-																</form>
+																	</a>
+																
 															</div>
 															<div class="col  col-md-4">
 																<form action="/reaktifusers" method="post">
+																	<?= csrf_field() ?>
 																	<input type="hidden" value="<?= $a->id; ?>" name="id-aktif" class="form-control">
 																	<button class="btn btn-sm btn-info btn-b" type="submit">
 																		<i class="las la-check"></i>
@@ -98,6 +97,7 @@ use CodeIgniter\Images\Image;
 															</div>
 															<div class="col  col-md-4">
 																<form action="/nonaktifusers" method="post">
+																	<?= csrf_field() ?>
 																	<input type="hidden" value="<?= $a->id; ?>" name="id-nonaktif" class="form-control">
 																	<button class="btn btn-sm btn-danger" type="submit">
 																		<i class="las la-times"></i>
