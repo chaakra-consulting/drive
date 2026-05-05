@@ -55,6 +55,7 @@ use CodeIgniter\Images\Image;
 									</div>
 									<div class="modal-body">
 										<form action="<?php base_url() ?>/add_project" method="POST">
+											<?= csrf_field() ?>
 											<div class="form-group">
 												<label for="tahun_proyek">Tahun Proyek</label>
 												<input type="text" name='tahun_proyek' class="form-control" id="tahun_proyek" placeholder="Tahun Proyek">

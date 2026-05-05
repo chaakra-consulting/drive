@@ -55,7 +55,7 @@ $routes->add('/delete_all_permision_project', 'Manajemen_Users::deleteall', ['fi
 
 
 $routes->add('/dataperusahaan', 'Manajemen_Data_Project::index', );
-$routes->add('/add_project', 'Manajemen_Data_Project::tambah',);
+$routes->add('/add_project', 'Manajemen_Data_Project::tambah');
 $routes->add('/update_project', 'Manajemen_Data_Project::ubah',);
 $routes->add('/delete_project', 'Manajemen_Data_Project::hapus',);
 
