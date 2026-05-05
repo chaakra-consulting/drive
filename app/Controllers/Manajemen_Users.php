@@ -34,15 +34,16 @@ class Manajemen_Users extends BaseController
     }
     public function delete(){
       $id_permision = $this->request->getPost("id_permision");
+      $id_user = $this->request->getPost("id_user");
       $this->db->query("DELETE FROM permisions_project where id=$id_permision");
       session()->setFlashdata("pesan-danger", "Izin berhasil dihapus");
-      return redirect()->to('/detailsuser');
+      return redirect()->to('/detailsuser/'.$id_user);
     }
     public function deleteall(){
       $id_user = $this->request->getPost("id_user");
       $this->db->query("DELETE FROM permisions_project where id_user=$id_user");
       session()->setFlashdata("pesan-danger", "Semua izin berhasil dihapus");
-      return redirect()->to('/detailsuser');
+      return redirect()->to('/detailsuser/'.$id_user);
     }
     public function add(){
       $id_proyek = $this->request->getPost("id_proyek");
@@ -54,7 +55,7 @@ class Manajemen_Users extends BaseController
         $this->db->query("INSERT INTO permisions_project (id_project,id_user) values ('$id_proyek','$id_user')");
         session()->setFlashdata("pesan", "Izin proyek berhasil ditambahkan");
       }
-      return redirect()->to('/detailsuser');
+      return redirect()->to('/detailsuser/'.$id_user);
     }
     public function detailsuser($id)
     {
