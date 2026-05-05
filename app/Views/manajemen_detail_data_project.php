@@ -154,7 +154,7 @@ use CodeIgniter\Images\Image;
 																</a>
 															</div>
 															<?php 
-															if(($a->id_pembuat)==(user()->id)){
+															if(($a->id)==(user()->id)){
 																?>
 															<div class="col col-md-4">
 																<a href="#" class="btn btn-sm btn-danger"  data-bs-effect="effect-super-scaled" data-bs-toggle="modal"  data-bs-target="#modaldelete<?= $no;?>">
