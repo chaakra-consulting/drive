@@ -54,7 +54,7 @@ $routes->add('/delete_permision_project', 'Manajemen_Users::delete', ['filter' =
 $routes->add('/delete_all_permision_project', 'Manajemen_Users::deleteall', ['filter' => 'role:admin,super admin']);
 
 
-$routes->add('/dataperusahaan', 'Manajemen_Data_Project::index', ['filter' => 'role:admin,super admin']);
+$routes->add('/dataperusahaan', 'Manajemen_Data_Project::index', );
 $routes->add('/add_project', 'Manajemen_Data_Project::tambah',);
 $routes->add('/update_project', 'Manajemen_Data_Project::ubah',);
 $routes->add('/delete_project', 'Manajemen_Data_Project::hapus',);
