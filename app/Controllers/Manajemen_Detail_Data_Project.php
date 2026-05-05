@@ -13,7 +13,7 @@ class Manajemen_Detail_Data_Project extends BaseController
   public function index($id)
   {
     $data = [
-      'data' => $this->db->query("SELECT a.`judul`,a.`id`,a.`nama_file`,a.`pesan`,c.`fullname`,b.`nama`,b.`tahun`,a.`create_at` FROM detail_data_project a LEFT JOIN data_project b ON a.`id_project`=b.`id` LEFT JOIN users c ON a.`id_pembuat`=c.`id` WHERE a.`id_project`=$id")->getResult(),
+      'data' => $this->db->query("SELECT a.`judul`,a.`id`,a.`nama_file`,a.`pesan`,a.`id_pembuat`,c.`fullname`,b.`nama`,b.`tahun`,a.`create_at` FROM detail_data_project a LEFT JOIN data_project b ON a.`id_project`=b.`id` LEFT JOIN users c ON a.`id_pembuat`=c.`id` WHERE a.`id_project`=$id")->getResult(),
       'data_project' => $this->db->query("SELECT * FROM data_project WHERE id=$id")->getResult(),
       'menu' => 'manajemen_detail__data_project'
     ];

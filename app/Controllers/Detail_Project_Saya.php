@@ -67,7 +67,7 @@ class Detail_Project_Saya extends BaseController
       }else{
         session()->setFlashdata("pesan-danger", "Harus menyertakan file");
       }
-      return redirect()->to('/detail_project_saya');
+      return redirect()->to('/detail_data_project/' . $id_project);
 
     }
     public function hapus()
@@ -77,7 +77,7 @@ class Detail_Project_Saya extends BaseController
       $data = $this->db->query("SELECT * FROM detail_data_project where id=$id_file")->getResult();
       unlink(FCPATH.'file\file-'.$data[0]->nama_file);
       $this->db->query("DELETE FROM detail_data_project where id=$id_file");
-      return redirect()->to('/detail_project_saya');
+      return redirect()->to('/detail_data_project/' . $data[0]->id_project);
     }
     public function download(){
       $id_file = $this->request->getPost("id_file");
