@@ -6,6 +6,7 @@ use App\Controllers\BaseController;
 
 class Manajemen_Data_Project extends BaseController
 {
+   protected $db;
   public function __construct()
     {
         $this->db = \Config\Database::connect();
@@ -25,7 +26,7 @@ class Manajemen_Data_Project extends BaseController
       $nama = $this->request->getPost("nama_proyek");
       $this->db->query("INSERT INTO data_project (tahun,nama,create_at,id_pembuat) VALUES ('$tahun','$nama',now(),$id)");
       session()->setFlashdata("pesan", "Proyek berhasil ditambahkan");
-      return redirect()->to('/dataperusahaan');
+      return redirect()->to('/project_saya');
 
     }
     public function ubah()
@@ -36,7 +37,7 @@ class Manajemen_Data_Project extends BaseController
       $nama = $this->request->getPost("nama_proyek");
       $this->db->query("UPDATE data_project SET tahun='$tahun',nama='$nama' where id=$id_proyek");
       session()->setFlashdata("pesan", "Proyek berhasil diubah");
-      return redirect()->to('/dataperusahaan');
+      return redirect()->to('/project_saya');
     }
     public function hapus()
     {
@@ -50,6 +51,6 @@ class Manajemen_Data_Project extends BaseController
       $this->db->query("DELETE FROM permisions_project where id_project=$id_proyek");
       $this->db->query("DELETE FROM data_project where id=$id_proyek");
       session()->setFlashdata("pesan-danger", "Proyek berhasil dihapus");
-      return redirect()->to('/dataperusahaan');
+      return redirect()->to('/project_saya');
     }
 }

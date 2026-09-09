@@ -81,7 +81,7 @@
 	<script src="<?= base_url(); ?>/assets-themes/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
 
 	<script src="<?= base_url(); ?>/assets-themes/plugins/ckeditor/ckeditor.js') ?>"></script>
-
+<?= $this->renderSection('script') ?>
 	<script>
   var quill = new Quill('#editor', {
     theme: 'snow'

@@ -8,6 +8,7 @@ use function PHPUnit\Framework\isNull;
 
 class Beranda extends BaseController
 {
+   protected $db;
   public function __construct()
     {
         $this->db = \Config\Database::connect();

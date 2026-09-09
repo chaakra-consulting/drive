@@ -6,6 +6,7 @@ use App\Controllers\BaseController;
 
 class Project_Saya extends BaseController
 {
+   protected $db;
   public function __construct()
     {
         $this->db = \Config\Database::connect();

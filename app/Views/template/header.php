@@ -60,6 +60,7 @@
 	<!--Internal  Quill css -->
 	<link href="<?= base_url(); ?>/assets-themes/plugins/quill/quill.snow.css" rel="stylesheet">
 	<link href="<?= base_url(); ?>/assets-themes/plugins/quill/quill.bubble.css" rel="stylesheet">
+	<link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet" />
 
 </head>
 

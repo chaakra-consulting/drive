@@ -64,6 +64,8 @@ $routes->add('/add_file_project', 'Manajemen_Detail_Data_Project::tambah',);
 $routes->add('/delete_file_project', 'Manajemen_Detail_Data_Project::hapus',);
 $routes->add('/update_file_project', 'Manajemen_Detail_Data_Project::ubah',);
 $routes->add('/download_file_project', 'Manajemen_Detail_Data_Project::download',);
+$routes->post('file/upload', 'Detail_Project_Saya::upload_temp');
+$routes->delete('file/delete', 'Detail_Project_Saya::delete_temp');
 
 /*
  * --------------------------------------------------------------------
