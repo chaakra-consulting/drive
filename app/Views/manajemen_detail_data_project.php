@@ -72,11 +72,9 @@ function file_size($file)
 									</div>
 									<div class="modal-body">
 										<?php if ($menu == 'detail_project_saya') { ?>
-											<form action="<?php base_url() ?>/add_file_project_saya" method="POST"
-												enctype="multipart/form-data">
+											<form action="<?php base_url() ?>/add_file_project_saya" method="POST">
 											<?php } else { ?>
-												<form action="<?php base_url() ?>/add_file_project" method="POST"
-													enctype="multipart/form-data">
+												<form action="<?php base_url() ?>/add_file_project" method="POST">
 												<?php } ?>
 												<div class="form-group">
 													<label for="judul">Judul</label>
@@ -85,7 +83,7 @@ function file_size($file)
 												</div>
 												<div class="form-group">
 													<label for="Password">Upload File</label>
-													<input type="file" name="file_project" id="File"
+													<input type="text" name="file_project" id="File"
 														class="filepond" required>
 												</div>
 												<div class="form-group">
