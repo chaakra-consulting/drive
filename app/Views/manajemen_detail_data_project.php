@@ -76,6 +76,7 @@ function file_size($file)
 											<?php } else { ?>
 												<form action="<?php base_url() ?>/add_file_project" method="POST">
 												<?php } ?>
+												<?= csrf_field() ?>
 												<div class="form-group">
 													<label for="judul">Judul</label>
 													<input type="text" name="judul" class="form-control" id="judul"
