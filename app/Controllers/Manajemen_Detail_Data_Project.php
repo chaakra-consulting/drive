@@ -49,30 +49,51 @@ class Manajemen_Detail_Data_Project extends BaseController
   {
     $id_pembuat = user()->id;
     $id_project = session()->get('id_proyek');
-    $judul = $this->request->getPost("judul");
-    $pesan = $this->request->getPost("pesan");
+    $judul      = $this->request->getPost("judul");
+    $pesan      = $this->request->getPost("pesan");
 
-    $nama_ori = $_FILES['file_project']['name'];
-    $x = explode('.', $nama_ori);
-    $ekstensi = strtolower(end($x));
-    $nama = strval($id_project . '-' . $id_pembuat . '-' . $judul . ' (' . date("Y-m-d H.i.s") . ').');
-    $ukuran  = $_FILES['file_project']['size'];
-    $file_tmp = $_FILES['file_project']['tmp_name'];
+    // 1. Ambil nama file dari POST (sekarang berupa teks/string dari FilePond, BUKAN file lagi)
+    $tempFileName = $this->request->getPost('file_project');
 
-    // echo $nama;
-    if ($nama_ori != '') {
-      $path = FCPATH . 'file\file-';
-      move_uploaded_file($file_tmp, $path . $nama . $ekstensi);
-      $query = $this->db->query("INSERT INTO detail_data_project (nama_file,judul,create_at,id_pembuat,pesan,id_project) VALUES ('" . $nama . $ekstensi . "','$judul',now(),$id_pembuat,'$pesan',$id_project)");
-      if ($query) {
-        session()->setFlashdata("pesan", "Berhasil menambah file");
-      } else {
-        session()->setFlashdata("pesan-danger", "Gagal menambah file");
-      }
+    if (!empty($tempFileName)) {
+        
+        // Definisikan path awal (file sementara) dan path tujuan (file akhir)
+        $tempPath = WRITEPATH . 'uploads/temp/' . $tempFileName;
+        
+        // FCPATH otomatis menunjuk ke folder 'public' Anda. Ini setara dengan WRITEPATH . '../public/file/'
+        $direktoriTarget = FCPATH . 'file/'; 
+
+        // 2. Cek apakah file benar-benar ada di folder sementara
+        if (file_exists($tempPath)) {
+            
+            // Inisialisasi object File CI4 dari file fisik untuk mendapatkan informasi ukuran
+            $file = new \CodeIgniter\Files\File($tempPath);
+            $size_kb = $file->getSize();
+            
+            // 3. Format nama file baru sesuai standar Anda
+            // Catatan: $tempFileName sudah membawa ekstensi file dari proses upload_temp
+            $name = $id_project . ' - ' . $id_pembuat . ' - ' . date("Y-m-d h.i.sa") . ' - ' . $tempFileName;
+            
+            $finalPath = $direktoriTarget . $name;
+
+            // 4. Pindahkan file dari temp ke folder akhir menggunakan fungsi bawaan PHP rename()
+            if (rename($tempPath, $finalPath)) {
+                var_dump("INSERT INTO detail_data_project (nama_file, judul, create_at, id_pembuat, pesan, id_project, ukuran_file) VALUES ('" . $name . "', '$judul', now(), $id_pembuat, '$pesan', $id_project, $size_kb)");
+                // 5. Simpan ke Database
+                $query = $this->db->query("INSERT INTO detail_data_project (nama_file, judul, create_at, id_pembuat, pesan, id_project, ukuran_file) VALUES ('" . $name . "', '$judul', now(), $id_pembuat, '$pesan', $id_project, $size_kb)");
+                
+                session()->setFlashdata("pesan", "Berhasil Menambahkan File");
+            } else {
+                session()->setFlashdata("pesan-danger", "Gagal Memindahkan File dari folder sementara.");
+            }
+        } else {
+            session()->setFlashdata("pesan-danger", "File tidak ditemukan di server. Silakan upload ulang.");
+        }
     } else {
-      session()->setFlashdata("pesan-danger", "Harus menyertakan file");
+        session()->setFlashdata("pesan-danger", "Harus menyertakan file");
     }
-    return redirect()->to('/detail_data_project');
+
+    return redirect()->to('/detail_project_saya/' . $id_project);
   }
   public function hapus()
   {
