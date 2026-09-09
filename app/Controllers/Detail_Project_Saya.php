@@ -6,12 +6,12 @@ use App\Controllers\BaseController;
 
 class Detail_Project_Saya extends BaseController
 {
-   protected $db;
+  protected $db;
   public function __construct()
-    {
-        $this->db = \Config\Database::connect();
-    }
-    public function upload_temp()
+  {
+    $this->db = \Config\Database::connect();
+  }
+  public function upload_temp()
   {
     
     $file = $this->request->getFile('file_project');
@@ -55,6 +55,35 @@ class Detail_Project_Saya extends BaseController
 
     // 5. Pesan error ini sekarang memunculkan nama file untuk mempermudah Anda melakukan proses debugging (jika masih gagal)
     return $this->response->setStatusCode(400)->setBody('Data tidak ditemukan: [' . $fileName . ']');
+  }
+  public function index($id)
+  {
+    if ($id == "") {
+      $id2 = session()->get('id_proyek');
+      $data = [
+        'data' => $this->db->query("SELECT a.ukuran_file,a.`id_pembuat`,a.`judul`,a.`id`,a.`nama_file`,a.`pesan`,c.`fullname`,b.`nama`,b.`tahun`,a.`create_at` FROM detail_data_project a LEFT JOIN data_project b ON a.`id_project`=b.`id` LEFT JOIN users c ON a.`id_pembuat`=c.`id` WHERE a.`id_project`=$id2")->getResult(),
+        'data_project' => $this->db->query("SELECT * FROM data_project WHERE id=$id2")->getResult(),
+        'menu' => 'detail_project_saya'
+      ];
+    } else {
+      if ($id != session()->get('id_proyek')) {
+        session()->set('id_proyek', $id);
+        $id2 = session()->get('id_proyek');
+        $data = [
+          'data' => $this->db->query("SELECT a.ukuran_file,a.`id_pembuat`,a.`judul`,a.`id`,a.`nama_file`,a.`pesan`,c.`fullname`,b.`nama`,b.`tahun`,a.`create_at` FROM detail_data_project a LEFT JOIN data_project b ON a.`id_project`=b.`id` LEFT JOIN users c ON a.`id_pembuat`=c.`id` WHERE a.`id_project`=$id2")->getResult(),
+          'data_project' => $this->db->query("SELECT * FROM data_project WHERE id=$id2")->getResult(),
+          'menu' => 'detail_project_saya'
+        ];
+      } else {
+        $id2 = session()->get('id_proyek');
+        $data = [
+          'data' => $this->db->query("SELECT a.ukuran_file,a.`id_pembuat`,a.`judul`,a.`id`,a.`nama_file`,a.`pesan`,c.`fullname`,b.`nama`,b.`tahun`,a.`create_at` FROM detail_data_project a LEFT JOIN data_project b ON a.`id_project`=b.`id` LEFT JOIN users c ON a.`id_pembuat`=c.`id` WHERE a.`id_project`=$id2")->getResult(),
+          'data_project' => $this->db->query("SELECT * FROM data_project WHERE id=$id2")->getResult(),
+          'menu' => 'detail_project_saya'
+        ];
+      }
+    }
+    return view('manajemen_detail_data_project', $data);
   }
   public function tambah()
   {
@@ -106,48 +135,20 @@ class Detail_Project_Saya extends BaseController
 
     return redirect()->to('/detail_project_saya/' . $id_project);
   }
-    public function index($id)
-    {
-       if ($id == "") {
-      $id2 = session()->get('id_proyek');
-      $data = [
-        'data' => $this->db->query("SELECT a.ukuran_file,a.`id_pembuat`,a.`judul`,a.`id`,a.`nama_file`,a.`pesan`,c.`fullname`,b.`nama`,b.`tahun`,a.`create_at` FROM detail_data_project a LEFT JOIN data_project b ON a.`id_project`=b.`id` LEFT JOIN users c ON a.`id_pembuat`=c.`id` WHERE a.`id_project`=$id2")->getResult(),
-        'data_project' => $this->db->query("SELECT * FROM data_project WHERE id=$id2")->getResult(),
-        'menu' => 'detail_project_saya'
-      ];
-    } else {
-      if ($id != session()->get('id_proyek')) {
-        session()->set('id_proyek', $id);
-        $id2 = session()->get('id_proyek');
-        $data = [
-          'data' => $this->db->query("SELECT a.ukuran_file,a.`id_pembuat`,a.`judul`,a.`id`,a.`nama_file`,a.`pesan`,c.`fullname`,b.`nama`,b.`tahun`,a.`create_at` FROM detail_data_project a LEFT JOIN data_project b ON a.`id_project`=b.`id` LEFT JOIN users c ON a.`id_pembuat`=c.`id` WHERE a.`id_project`=$id2")->getResult(),
-          'data_project' => $this->db->query("SELECT * FROM data_project WHERE id=$id2")->getResult(),
-          'menu' => 'detail_project_saya'
-        ];
-      } else {
-        $id2 = session()->get('id_proyek');
-        $data = [
-          'data' => $this->db->query("SELECT a.ukuran_file,a.`id_pembuat`,a.`judul`,a.`id`,a.`nama_file`,a.`pesan`,c.`fullname`,b.`nama`,b.`tahun`,a.`create_at` FROM detail_data_project a LEFT JOIN data_project b ON a.`id_project`=b.`id` LEFT JOIN users c ON a.`id_pembuat`=c.`id` WHERE a.`id_project`=$id2")->getResult(),
-          'data_project' => $this->db->query("SELECT * FROM data_project WHERE id=$id2")->getResult(),
-          'menu' => 'detail_project_saya'
-        ];
-      }
-    }
-      return view('manajemen_detail_data_project',$data);
-    }
-    
-    public function hapus($id)
-    {
-      // $id = user()->id; 
-      $id_file = $id;
-      $data = $this->db->query("SELECT * FROM detail_data_project where id=$id_file")->getResult();
-      unlink(FCPATH.'file\file-'.$data[0]->nama_file);
-      $this->db->query("DELETE FROM detail_data_project where id=$id_file");
-      return redirect()->to('/detail_data_project/' . $data[0]->id_project);
-    }
-    public function download($id){
-      $id_file = $id;
-      $data = $this->db->query("SELECT * FROM detail_data_project where id=$id_file")->getResult();
-      return $this->response->download(FCPATH.'file\file-' . $data[0]->nama_file, null);
-    }
+  public function hapus()
+  {
+    $id = user()->id;
+    $id_file = $this->request->getPost("id_file");
+    $data = $this->db->query("SELECT * FROM detail_data_project where id=$id_file")->getResult();
+    unlink(FCPATH . 'file/' . $data[0]->nama_file);
+    $this->db->query("DELETE FROM detail_data_project where id=$id_file");
+    session()->setFlashdata("pesan-danger", "File proyek berhasil dihapus");
+    return redirect()->to('/project_saya');
+  }
+  public function download()
+  {
+    $id_file = $this->request->getPost("id_file");
+    $data = $this->db->query("SELECT * FROM detail_data_project where id=$id_file")->getResult();
+    return $this->response->download(FCPATH . 'file/' . $data[0]->nama_file, null);
+  }
 }

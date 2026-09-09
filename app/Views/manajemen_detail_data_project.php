@@ -72,11 +72,12 @@ function file_size($file)
 									</div>
 									<div class="modal-body">
 										<?php if ($menu == 'detail_project_saya') { ?>
-											<form action="<?php base_url() ?>/add_file_project_saya" method="POST">
+											<form action="<?php base_url() ?>/add_file_project_saya" method="POST"
+												enctype="multipart/form-data">
 											<?php } else { ?>
-												<form action="<?php base_url() ?>/add_file_project" method="POST">
+												<form action="<?php base_url() ?>/add_file_project" method="POST"
+													enctype="multipart/form-data">
 												<?php } ?>
-												<?= csrf_field() ?>
 												<div class="form-group">
 													<label for="judul">Judul</label>
 													<input type="text" name="judul" class="form-control" id="judul"
@@ -84,7 +85,7 @@ function file_size($file)
 												</div>
 												<div class="form-group">
 													<label for="Password">Upload File</label>
-													<input type="text" name="file_project" id="File"
+													<input type="file" name="file_project" id="File"
 														class="filepond" required>
 												</div>
 												<div class="form-group">
@@ -197,7 +198,7 @@ function file_size($file)
 												<?= $a->nama_file; ?>
 											</td>
 											<td>
-												<?= file_size($a->ukuran_file ?? 0) ?>
+												<?= file_size($a->ukuran_file) ?>
 											</td>
 											<td>
 												<?= $a->create_at; ?>
